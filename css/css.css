@@ -1,0 +1,830 @@
+
+@keyframes iconAnimation {
+    0%{
+        transform:translate(0, 0);
+    }
+
+    25%{
+        transform:translate(0, -5px);
+    }
+
+    75%{
+        transform:translate(0, 5px);
+    }
+
+    100%{
+        transform:translate(0, 0);
+    }
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+.first{
+    height: 100vh;
+    width: 100%;
+    background: #121212 url('https://nzsjtzs2b.qnssl.com/%E9%A6%96%E9%A1%B5%E8%83%8C%E6%99%AF1.png') no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.first nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 100;
+}
+
+.first .nav{
+    height: 60px;
+    width: 1100px;
+    margin:0 auto;
+    color: #fff;
+}
+
+.first .nav1{
+    color: #fff;
+    background: #121212;
+
+}
+
+.first .nav1:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 60px;
+    margin-top: -60px;
+    background-image: linear-gradient(-90deg, rgba(255, 98, 254, .2) 0%, rgba(55, 111, 255, .2) 100%);
+    z-index: -1;
+}
+
+.first .nav .left {
+    float: left;
+    opacity: 1;
+}
+
+.first .nav .left img{
+    width: 67px;
+    height: 18px;
+    margin-top: 21px;
+}
+
+.first .nav .right{
+    float: right;
+    opacity: 1;
+}
+
+.first .nav .right li{
+    float: left;
+    margin-left: 60px;
+}
+
+.first .nav .right li a{
+    display: inline-block;
+    height: 59px;
+    line-height: 59px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.first .nav1 .right li a.active{
+    border-bottom: 1px solid #fff;
+}
+
+.first .main{
+    text-align: center;
+    height: 451px;
+    margin-top: calc(50vh - 205px);
+}
+
+.first .main h2{
+    font-family: PingFangSC-Regular;
+    font-size: 68px;
+    color: #FFFFFF;
+    line-height: 64px;
+}
+
+.first .main .tip{
+    font-family: PingFangSC-Regular;
+    font-size: 40px;
+    color: #FFFFFF;
+    line-height: 40px;
+    margin-top: 20px;
+}
+
+.first .main .tit{
+    font-family: PingFangSC-Regular;
+    font-size: 28px;
+    color: #FFFFFF;
+    line-height: 28px;
+    margin-top: 70px;
+}
+
+.first .main img{
+    margin-top: 20px;
+    height: 7px;
+    width: 18px;
+}
+
+.first .main .time{
+    margin-top: 10px;
+    font-family: PingFangSC-Regular;
+    font-size: 34px;
+    color: #FFFFFF;
+    line-height: 36px;
+}
+
+.first .main .btnBox{
+    margin: 0 auto;
+    margin-top: 114px;
+    width: 420px;
+}
+
+.first .main .btnBox .btn {
+    height: 45px;
+    width: 140px;
+    border: 1px solid #fff;
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 45px;
+    cursor: pointer;
+}
+
+.first .main .btnBox .left {
+    float: left;
+}
+
+.first .main .btnBox .right{
+    float: right;
+}
+
+.content{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: #121212;
+    overflow: hidden;
+}
+
+.content .contentTop{
+    text-align: center;
+    color: #fff;
+}
+
+.content .main{
+    margin: 0 auto;
+    margin-top: 100px;
+    width:1100px;
+}
+
+.content .contentTop .tip{
+    display: inline-block;
+    font-family: PingFangSC-Thin;
+    font-size: 32px;
+    color: #FFFFFF;
+    line-height: 32px;
+    margin-top: 15px;
+}
+
+.second .icon{
+    display: inline-block;
+    height: 54px;
+    width: 25px;
+    animation: iconAnimation 2s linear infinite;
+}
+
+.third .icon{
+    display: inline-block;
+    height: 54px;
+    width: 23px;
+    animation: iconAnimation 2s linear infinite;
+}
+
+.fourth .icon{
+    display: inline-block;
+    height: 54px;
+    width: 25px;
+    animation: iconAnimation 2s linear infinite;
+}
+
+.fiveth .icon{
+    display: inline-block;
+    height: 54px;
+    width: 25px;
+    animation: iconAnimation 2s linear infinite;
+}
+
+.sixth .icon{
+    display: inline-block;
+    height: 54px;
+    width: 25px;
+    animation: iconAnimation 2s linear infinite;
+}
+
+.second .main{
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+    color: #fff;
+}
+
+.second .main p{
+    font-family: PingFangSC-Regular;
+    font-size: 22px;
+    color: #FFFFFF;
+    line-height: 30px;
+}
+
+.third .main .sceneMain{
+}
+
+.third .main .sceneMain .unit {
+    float: left;
+    margin-right: 46px;
+    width: 240px;
+    padding: 72px 0px;
+    border: 3px solid transparent;
+    box-sizing: border-box;
+    text-align: center;
+    border-image: -webkit-linear-gradient(top, rgba(255, 98, 245, .3), rgba(55, 111, 255, .3)) 3 3;
+}
+
+.third .main .sceneMain .unit img {
+    width: 32px;
+    height: 32px;
+}
+
+.third .main .sceneMain .unit h3{
+    font-family: PingFangSC-Regular;
+    font-size: 22px;
+    color: #FFFFFF;
+    line-height: 22px;
+    margin-top: 16px;
+}
+
+.third .main .sceneMain .unit p{
+    opacity: 0.8;
+    font-family: PingFangSC-Regular;
+
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 30px;
+}
+
+.third .main .sceneMain .unit .topP{
+    margin-top: 26px;
+}
+
+.fourth .main .technicalMain .unit{
+    float: left;
+    margin-right: 73px;
+}
+
+.fourth .main .technicalMain .unit img{
+    width: 220px;
+    height: 220px;
+}
+
+.fourth .main .technicalMain .unitTop{
+    margin-top: 110px;
+}
+
+.fourth .main .technicalMain .unit .line{
+    width: 30px;
+    height: 3px;
+    background-image: linear-gradient(-90deg, #FF62F5 0%, #376FFF 100%);
+    margin-top: 24px;
+}
+
+.fourth .main .technicalMain .unit .tip{
+    display: inline-block;
+    margin-top: 24px;
+    color: #fff;
+}
+
+.fiveth .main .principleMain .unit{
+    width: 33.33%;
+    float: left;
+    text-align: center;
+}
+
+.fiveth .main .principleMain .unit p{
+}
+.fiveth .main .principleMain .unit .tit{
+    font-family: PingFangSC-Regular;
+    font-size: 24px;
+    color: #FFFFFF;
+    line-height: 24px;
+}
+
+.fiveth .main .principleMain .unit .tip{
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 18px;
+    margin-top: 27px;
+}
+
+.fiveth .main .principleMain .unit img{
+    display: inline-block;
+    width: 18px;
+    height: 8px;
+    margin-top: 27px;
+}
+
+
+.point{
+    width: 12px;
+    height: 12px;
+    background-image: linear-gradient(-160deg, #FF62F5 0%, #376FFF 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #FF62F5;
+}
+
+.sixth .main{
+    width: 500px;
+}
+
+.sixth.content{
+    padding-bottom: 200px;
+}
+
+.sixth .main .left{
+    position: relative;
+    float: left;
+    height: 434px;
+    width: 54px;
+}
+
+.sixth .main .left .line{
+    height: 360px;
+    display: inline-block;
+    border-left: 1px dashed #fff;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.sixth .main .left img {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.sixth .main .left .first{
+    top: 20px;
+}
+
+.sixth .main .left .second{
+    top: 210px;
+}
+
+.sixth .main .left .third{
+    top: 400px;
+}
+
+.sixth .main .right{
+    flaot: right;
+}
+
+.sixth .main .right .unit {
+    margin-bottom: 130px;
+}
+
+.sixth .main .right .unit .tit{
+    font-family: PingFangSC-Light;
+    font-size: 28px;
+    color: #FFFFFF;
+    line-height: 28px;
+}
+
+.sixth .main .right .unit .tip{
+    font-family: PingFangSC-Light;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+footer{
+    height: 246px;
+    background: #181818;
+}
+
+footer .main{
+    position: relative;
+    width: 1100px;
+    height: 246px;
+    margin:0 auto;
+}
+
+footer .main img {
+    position: absolute;
+}
+
+footer .main .bottom{
+    bottom: 0;
+    left: 0;
+    width: 316px;
+    height: 199px;
+}
+
+footer .main .top{
+    top: 0;
+    right: 0;
+    width: 390px;
+    height: 185px;
+}
+
+footer .main .mainBox{
+    padding-top: 80px;
+    width: 420px;
+    margin: 0 auto;
+}
+
+footer .main .mainBox .left {
+    float: left;
+    width: 80px;
+    text-align: center;
+}
+
+footer .main .mainBox .left h3{
+    font-family: PingFangSC-Light;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+footer .main .mainBox .left a{
+    font-family: PingFangSC-Thin;
+    display: inline-block;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+footer .main .mainBox .right{
+    float: right;
+    width: 126px;
+    text-align: center;
+}
+
+footer .main .mainBox .right h3 {
+    font-family: PingFangSC-Light;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+footer .main .mainBox .right span{
+    font-family: PingFangSC-Thin;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 18px;
+}
+
+@media screen and (max-width: 1200px){
+    .first .nav{
+        padding: 0 5vw;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .content .main{
+        width: 100%;
+    }
+
+    .fourth .main .technicalMain .unit .tip{
+        font-size: 18px;
+    }
+
+    .first .main h2{
+        font-size: 60px;
+    }
+
+    .first .main .tip{
+        font-size: 35px;
+    }
+
+    .first .main .tit{
+        font-size: 30px;
+    }
+
+    .first .main .time{
+        font-size: 30px;
+    }
+
+    .second .main{
+        padding: 0 5vw;
+        box-sizing: border-box;
+    }
+
+    .third .main{
+        width: 100%;
+    }
+
+    .third .main .sceneMain{
+        width: 94vw;
+        margin: 0 auto;
+    }
+
+    .third .main .sceneMain .unit{
+        margin-right: 2vw;
+        width: calc(22vw - 6px);
+        box-sizing: content-box;
+    }
+
+    .third .main .sceneMain .unit h3{
+        font-size: 20px;
+    }
+
+    .third .main .sceneMain .unit p{
+        font-size: 15px;
+    }
+
+    .fourth .main .technicalMain{
+        margin: 0 auto;
+        width: 92vw;
+    }
+
+    .fourth .main .technicalMain .unit{
+        margin-right: 4vw;
+    }
+
+    .fourth .main .technicalMain .unit img{
+        height: 20vw;
+        width: 20vw;
+    }
+
+    .fiveth .main .principleMain{
+        margin: 0 4vw;
+    }
+
+    .fiveth .main .principleMain .unit .tit{
+        font-size: 20px;
+    }
+
+    .fiveth .main .principleMain .unit .tip{
+        font-size: 16px;
+    }
+
+    .sixth .main{
+        width: 500px;
+    }
+
+    .sixth .main .right .unit .tit{
+        font-size: 20px;
+    }
+
+    .sixth .main .right .unit .tip{
+        font-size: 16px;
+    }
+
+    footer .main{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .content {
+        padding: 60px 0;
+    }
+
+    .content .main{
+        margin-top: 60px;
+    }
+
+    .content .contentTop .tip{
+        font-size: 20px;
+    }
+
+    .first nav{
+        height: 40px;
+    }
+
+    .first .nav{
+        height: 40px;
+    }
+
+    .first .nav .left img{
+        height: 10px;
+        width: 40px;
+        margin-top: 15px;
+    }
+
+    .first .nav .right li{
+        margin-left: 20px;
+    }
+
+    .first .nav .right li a{
+        font-size: 12px;
+        line-height: 40px;
+        height: 40px;
+    }
+
+    .first .main{
+        margin-top: calc(50vh - 165px);
+    }
+
+    .first .main h2{
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .first .main .tip{
+        font-size: 20px;
+        margin-top:0;
+    }
+
+    .first .main .tit{
+        font-size: 16px;
+        margin-top: 40px;
+    }
+
+    .first .main img{
+        margin-top: 10px;
+    }
+
+    .first .main .time{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .first .main .btnBox{
+        width: 300px;
+        margin-top: 80px;
+    }
+
+    .first .main .btnBox .btn{
+        height: 30px;
+        width: 110px;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .second .main p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .third .main .sceneMain .unit{
+        box-sizing: border-box;
+        width: calc(46vw);
+        margin-top: 10px;
+        padding: 42px 0;
+        border: 3px solid transparent;
+        border-image: -webkit-linear-gradient(top, rgba(255, 98, 245, .3), rgba(55, 111, 255, .3)) 2 2;
+    }
+
+    .third .main .sceneMain .unit:nth-child(2){
+        margin-right: 0;
+    }
+
+    .third .main .sceneMain .unit h3{
+        font-size: 16px;
+    }
+
+    .third .main .sceneMain .unit .topP{
+        font-size: 12px;
+    }
+
+    .third .main .sceneMain .unit p{
+        line-height: 20px;
+        font-size: 12px;
+    }
+
+    .fourth .main .technicalMain .unit .tip{
+        font-size: 14px;
+        margin-top: 12px;
+    }
+
+    .fourth .main .technicalMain .unit .line{
+        height: 2px;
+        margin-top: 12px;
+    }
+
+    .fiveth .main .principleMain .unit{
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .fiveth .main .principleMain .unit .tit{
+        font-size: 14px;
+    }
+
+    .fiveth .main .principleMain .unit .tip{
+        font-size: 12px;
+        margin-top: 13px;
+    }
+
+    .fiveth .main .principleMain .unit img{
+        margin-top: 13px;
+    }
+
+    .sixth .main .right .unit .tit{
+        font-size: 16px;
+    }
+
+    .sixth .main .right .unit .tip{
+        font-size: 12px;
+        margin-top:0px;
+    }
+
+    .sixth .main{
+        width: 300px;
+    }
+
+    .sixth .main .right .unit{
+        margin-bottom: 70px;
+    }
+
+    .sixth .main .left{
+        height: 310px;
+    }
+
+    .sixth .main .left .line{
+        height: 220px;
+    }
+
+    .sixth .main .left .second{
+        top:135px;
+    }
+
+    .sixth .main .left .third{
+        top: 250px;
+    }
+
+    .sixth.content{
+        padding-bottom: 120px;
+    }
+
+    footer .main .top{
+        width: 145px;
+        height: 143px;
+    }
+
+    footer .main .bottom{
+        height: 100px;
+        width: 158px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    footer{
+        height: 130px;
+    }
+
+    footer .main .mainBox .left h3{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    footer .main .mainBox .left a{
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    footer .main .mainBox .right h3{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    footer .main .mainBox .right span{
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    footer .main .bottom{
+        width: 30vw;
+        height: 18.9vw;
+    }
+
+    footer .main .top{
+        width: 36vw;
+        height:17vw;
+    }
+
+    footer .main{
+        height: 130px;
+    }
+
+    footer .main .mainBox{
+        padding-top: 30px;
+    }
+
+    footer .main .mainBox{
+        width: 100%;
+        padding: 0 60px;
+        padding-top: 30px;
+        box-sizing: border-box;
+    }
+}
+
