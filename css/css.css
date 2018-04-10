@@ -486,9 +486,11 @@ footer .main .mainBox .right h3 {
 
 footer .main .mainBox .right a{
     font-family: PingFangSC-Thin;
+    display: inline-block;
     font-size: 14px;
     color: #FFFFFF;
     line-height: 14px;
+    margin-bottom: 10px;
 }
 footer .main .mainBox .right span{
     font-family: PingFangSC-Thin;
