@@ -464,9 +464,9 @@ footer .main .mainBox .left h3{
 footer .main .mainBox .left a{
     font-family: PingFangSC-Thin;
     display: inline-block;
-    font-size: 18px;
+    font-size: 14px;
     color: #FFFFFF;
-    line-height: 18px;
+    line-height: 14px;
     margin-bottom: 10px;
 }
 
@@ -486,9 +486,16 @@ footer .main .mainBox .right h3 {
 
 footer .main .mainBox .right span{
     font-family: PingFangSC-Thin;
-    font-size: 18px;
+    font-size: 14px;
     color: #FFFFFF;
-    line-height: 18px;
+    line-height: 14px;
+}
+
+footer .main .mainBox .right span a{
+    font-family: PingFangSC-Thin;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 14px;
 }
 
 @media screen and (max-width: 1200px){
