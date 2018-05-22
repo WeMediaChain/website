@@ -21,13 +21,27 @@ body{
     overflow-x: hidden;
 }
 
+#root{
+    height: 100vh;
+    overflow-y: scroll;
+}
+
 
 .first{
+    position: relative;
     height: 100vh;
     width: 100%;
-    background: #121212 url('https://nzsjtzs2b.qnssl.com/%E9%A6%96%E9%A1%B5%E8%83%8C%E6%99%AF1.png') no-repeat;
-    background-size: cover;
+    background: #121212;
     overflow: hidden;
+}
+
+.first .arrowDown{
+    position: absolute;
+    height: 7px;
+    width: 18px;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -9px;
 }
 
 .first nav{
@@ -35,12 +49,12 @@ body{
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: 54px;
     z-index: 100;
 }
 
 .first .nav{
-    height: 60px;
+    height: 54px;
     width: 1100px;
     margin:0 auto;
     color: #fff;
@@ -48,19 +62,35 @@ body{
 
 .first .nav1{
     color: #fff;
-    background: #121212;
-
+    background: rgba(18,18,18, .8);
 }
 
 .first .nav1:after{
     position: absolute;
     content: '';
     width: 100%;
-    height: 60px;
-    margin-top: -60px;
+    height: 54px;
+    margin-top: -54px;
     background-image: linear-gradient(-90deg, rgba(255, 98, 254, .2) 0%, rgba(55, 111, 255, .2) 100%);
     z-index: -1;
 }
+
+.first .nav2{
+    color: #fff;
+    background: rgba(18,18,18, .8);
+    height: 130px;
+}
+
+.first .nav2:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    margin-top: -54px;
+    background-image: linear-gradient(-90deg, rgba(255, 98, 254, .2) 0%, rgba(55, 111, 255, .2) 100%);
+    z-index: -1;
+    height: 130px;
+}
+
 
 .first .nav .left {
     float: left;
@@ -68,9 +98,16 @@ body{
 }
 
 .first .nav .left img{
-    width: 67px;
-    height: 18px;
-    margin-top: 21px;
+    width: 48px;
+    height: 14px;
+    margin-top: 13px;
+}
+
+.first .nav .left .imgLogo{
+    width: 32px;
+    height: 25px;
+    vertical-align: sub;
+    margin-right:3px;
 }
 
 .first .nav .right{
@@ -78,27 +115,54 @@ body{
     opacity: 1;
 }
 
-.first .nav .right li{
+.first .nav .right .navList{
     float: left;
-    margin-left: 60px;
+    margin-left: 100px;
 }
 
 .first .nav .right li a{
+    font-family: PingFangTC-Light;
     display: inline-block;
-    height: 59px;
-    line-height: 59px;
+    height: 50px;
+    line-height: 54px;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
+    cursor:pointer;
 }
 
-.first .nav1 .right li a.active{
-    border-bottom: 1px solid #fff;
+.first .nav .right li ul li a{
+    font-family: PingFangTC-Thin;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 14px;
+    height:30px;
+}
+
+.first nav .right li a.active{
+    font-family: PingFangTC-Semibold;
+    border-bottom: 2px solid transparent;
+    border-image: -webkit-linear-gradient(left, #FF00EF, #1F01FF) 2 2;
+}
+
+.first .right li .subMenu{
+    display: none;
+    position: absolute;
+    padding-top: 8px;
+}
+
+.first .right li .subMenuActive{
+    display: block;
+}
+
+.first .right li .subMenu li{
+    height: 30px;
+    line-height: 30px;
 }
 
 .first .main{
     text-align: center;
-    height: 451px;
-    margin-top: calc(50vh - 205px);
+    height: 421px;
+    margin-top: calc(50vh - 200px);
 }
 
 .first .main h2{
@@ -108,11 +172,35 @@ body{
     line-height: 64px;
 }
 
-.first .main .tip{
-    font-family: PingFangSC-Regular;
-    font-size: 40px;
+.first .main h3{
+    font-family: AvenirNext-Regular;
+    font-size: 26px;
     color: #FFFFFF;
-    line-height: 40px;
+    line-height: 32px;
+    letter-spacing:12px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.first .main .introduce{
+    margin-top: 80px;
+}
+
+.first .main .introduce .row{
+    font-family: PingFangSC-Light;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 16px;
+    margin-bottom: 10px;
+}
+
+.first .main .tip{
+    font-family: PingFangSC-Light;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 16px;
+    letter-spacing:40px;
+    text-indent: 40px;
     margin-top: 20px;
 }
 
@@ -125,9 +213,9 @@ body{
 }
 
 .first .main img{
-    margin-top: 20px;
-    height: 7px;
-    width: 18px;
+    display: inline-block;
+    width: 167px;
+    height: 101px;
 }
 
 .first .main .time{
@@ -140,18 +228,19 @@ body{
 
 .first .main .btnBox{
     margin: 0 auto;
-    margin-top: 114px;
+    margin-top: 60px;
     width: 420px;
 }
 
 .first .main .btnBox .btn {
-    height: 45px;
-    width: 140px;
-    border: 1px solid #fff;
+    display: inline-block;
+    height: 40px;
+    width: 128px;
+    border: 1px solid rgba(255, 255, 255, .48);
     font-family: PingFangSC-Regular;
-    font-size: 18px;
+    font-size: 16px;
     color: #FFFFFF;
-    line-height: 45px;
+    line-height: 40px;
     cursor: pointer;
 }
 
@@ -164,7 +253,7 @@ body{
 }
 
 .content{
-    padding-top: 100px;
+    padding-top: 200px;
     padding-bottom: 100px;
     background: #121212;
     overflow: hidden;
@@ -184,10 +273,11 @@ body{
 .content .contentTop .tip{
     display: inline-block;
     font-family: PingFangSC-Thin;
-    font-size: 32px;
+    font-size: 20px;
     color: #FFFFFF;
-    line-height: 32px;
-    margin-top: 15px;
+    line-height: 20px;
+    margin-top: 10px;
+    padding-right:4px;
 }
 
 .second .icon{
@@ -195,6 +285,64 @@ body{
     height: 54px;
     width: 25px;
     animation: iconAnimation 2s linear infinite;
+}
+
+.second .main .unit{
+    position: relative;
+    float: left;
+    width: 50%;
+    font-size: 0;
+    text-align: left;
+    padding-left: 100px;
+    box-sizing: border-box;
+}
+
+.second .main .num1:before {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 46px;
+    background: url('../img/num1.png') no-repeat;
+    background-size: 100% 100%;
+    margin-left: -38px;
+    margin-top: -60px;
+}
+
+.second .main .num2:before {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 66px;
+    background: url('../img/num2.png') no-repeat;
+    background-size: 100% 100%;
+    margin-left: -38px;
+    margin-top: -60px;
+}
+
+.second .main .unit .header{
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 20px;
+}
+
+.second .main .unit .line{
+    display: inline-block;
+    height: 1px;
+    width: 15px;
+    background: #fff;
+    margin-top: 30px;
+}
+
+.second .main .unit .tip{
+    margin-top: 22px;
+}
+
+.second .main .unit .tip p{
+    font-family: PingFangSC-Thin;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 24px;
 }
 
 .third .icon{
@@ -228,7 +376,7 @@ body{
 .second .main{
     max-width: 1100px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 220px;
     text-align: center;
     color: #fff;
 }
@@ -311,6 +459,28 @@ body{
     width: 33.33%;
     float: left;
     text-align: center;
+    font-size: 0;
+}
+
+.fiveth .main .principleMain .unit .top{
+    width: 40px;
+    height: 40px;
+}
+
+.fiveth .main .principleMain .unit .into{
+    font-family: PingFangSC-Regular;
+    display: inline-block;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 18px;
+    margin-top: 40px;
+}
+
+.fiveth .main .principleMain .unit .tip p{
+    font-family: PingFangSC-Thin;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 24px;
 }
 
 .fiveth .main .principleMain .unit p{
@@ -346,20 +516,11 @@ body{
     box-shadow: 0 0 0 4px #FF62F5;
 }
 
-.sixth .main{
-    width: 500px;
-}
 
 .sixth.content{
-    padding-bottom: 200px;
+    //padding-bottom: 120px;
 }
 
-.sixth .main .left{
-    position: relative;
-    float: left;
-    height: 434px;
-    width: 54px;
-}
 
 .sixth .main .left .line{
     height: 360px;
@@ -411,38 +572,218 @@ body{
     margin-top: 10px;
 }
 
+.sixth .main .header{
+    font-family: PingFangSC-Light;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 18px;
+    margin-top: 160px;
+    text-align: center;
+}
+
+.sixth .main .lineMain{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 86px;
+    font-family: PingFangSC-Light;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 14px;
+}
+
+.sixth  .tipBottom{
+    font-family: PingFangSC-Light;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 14px;
+    margin-top: 20px;
+}
+
+.sixth .main .lineMain .numBox{
+    margin-top: 10px;
+    height: 14px;
+}
+
+.sixth .main .lineMain .left{
+    float: left;
+}
+
+.sixth .main .lineMain .right{
+    float: right;
+}
+
+.sixth .main .lineMain .line{
+    position: relative;
+    width: 1000px;
+    height: 16px;
+    background: #fff;
+}
+
+.sixth .main .lineMain .line .now{
+    display: inline-block;
+    background-image: linear-gradient(90deg, #FF00EF 0%, #1F01FF 100%);
+    width: 50%;
+    height: 16px;
+}
+
+.sixth .main .lineMain .line .num{
+    position: absolute;
+    font-family: PingFangSC-Light;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 14px;
+    margin-top: -20px;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.sixth .main .lineMain .line .left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0px;
+    width: 0px;
+    border: 4px solid transparent;
+    border-top: 4px solid #121212;
+    border-left: 4px solid #121212;
+}
+
+.sixth .main .lineMain .line .right{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0px;
+    width: 0px;
+    border: 4px solid transparent;
+    border-bottom: 4px solid #121212;
+    border-left: 4px solid #121212;
+}
+
+.sixth .main .lineMain .line .top{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 0px;
+    width: 0px;
+    border: 4px solid transparent;
+    border-top: 4px solid #121212;
+    border-right: 4px solid #121212;
+}
+
+.sixth .main .lineMain .line .bottom{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 0px;
+    width: 0px;
+    border: 4px solid transparent;
+    border-bottom: 4px solid #121212;
+    border-right: 4px solid #121212;
+}
+
+.begin{
+    background: #121212;
+    padding-bottom: 300px;
+}
+
+.begin img{
+    display: block;
+    height: 6px;
+    width: 18px;
+    margin: 0 auto;
+}
+
+.begin .header{
+    margin-top: 120px;
+}
+
+.begin .header p{
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 18px;
+    text-align: center;
+}
+
+.begin .btn{
+    height: 40px;
+    width: 128px;
+    display: block;
+    margin: 0 auto;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 16px;
+    background: transparent;
+    margin-top: 40px;
+    border: 1px solid transparent;
+    border-image: -webkit-linear-gradient(left,#FF00EF,#1F01FF) 1 1;
+}
+
 footer{
-    height: 246px;
+    position: relative;
+    height: 306px;
     background: #181818;
+
+}
+
+footer .main .logo{
+    position: static;
+    height:22px;
+    width: 28px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 60px;
 }
 
 footer .main{
     position: relative;
     width: 1100px;
-    height: 246px;
+    height: 306px;
     margin:0 auto;
+    overflow: hidden;
 }
 
 footer .main img {
     position: absolute;
 }
 
-footer .main .bottom{
+footer  .bottom{
+    position: absolute;
     bottom: 0;
-    left: 0;
+    left: 10vw;
     width: 316px;
     height: 199px;
 }
 
-footer .main .top{
+footer  .top{
+    position: absolute;
     top: 0;
     right: 0;
     width: 390px;
     height: 185px;
 }
 
+footer  .leftImg {
+    position: absolute;
+    bottom:0;
+    left: 5vw;
+    width:531px;
+    height:61px;
+}
+
+footer  .rightImg {
+    position: absolute;
+    bottom:0;
+    right: 5vw;
+    width:531px;
+    height:61px;
+}
+
 footer .main .mainBox{
-    padding-top: 80px;
+    padding-top: 60px;
     width: 420px;
     margin: 0 auto;
 }
@@ -455,15 +796,15 @@ footer .main .mainBox .left {
 
 footer .main .mainBox .left h3{
     font-family: PingFangSC-Light;
-    font-size: 20px;
+    font-size: 14px;
     color: #FFFFFF;
-    line-height: 20px;
+    line-height: 14px;
     margin-bottom: 20px;
 }
 
 footer .main .mainBox .left a{
-    font-family: PingFangSC-Thin;
     display: inline-block;
+    font-family: PingFangSC-Thin;
     font-size: 14px;
     color: #FFFFFF;
     line-height: 14px;
@@ -472,15 +813,15 @@ footer .main .mainBox .left a{
 
 footer .main .mainBox .right{
     float: right;
-    width: 126px;
+    width: 160px;
     text-align: center;
 }
 
 footer .main .mainBox .right h3 {
     font-family: PingFangSC-Light;
-    font-size: 20px;
+    font-size: 14px;
     color: #FFFFFF;
-    line-height: 20px;
+    line-height: 14px;
     margin-bottom: 20px;
 }
 
@@ -506,7 +847,162 @@ footer .main .mainBox .right span a{
     line-height: 14px;
 }
 
+.footer{
+    height: 205px;
+}
+
+.footer .main {
+    height: 205px;
+}
+
+.first .main.mainPage{
+    margin:0 auto;
+    margin-top: 210px;
+    width: 1100px;
+    height: auto;
+}
+
+.first.firstPage{
+    position: relative;
+}
+
+.first.firstPage .bottomImg{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 187px;
+    width: 832px;
+}
+
+.first .main.mainPage .aboutMain{}
+
+.first .main.mainPage .aboutMain .row{
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.first .main.mainPage .aboutMain .row .left{
+    height: 9px;
+    width: 8px;
+    float: left;
+    margin-top: 7px;
+}
+
+.first .main.mainPage .aboutMain .row .right{
+    display: block;
+    margin-left: 18px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 24px;
+}
+
+.first .main.mainPage .contact{
+    margin-top: 50px;
+    text-align: left;
+}
+
+.first .main.mainPage .contact .row{
+    display: inline-block;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 14px;
+}
+
+.first .main.mainPage .midImg{
+    display: block;
+    height: 6px;
+    width: 18px;
+    margin-top: 60px;
+}
+
+.first .main.mainPage .introduce{
+    text-align: left;
+    margin: 0 auto;
+
+}
+
+.first .main.mainPage .mainIntroduce{
+    text-align: left;
+    margin-top: 60px;
+}
+
+.first.firstPage{
+    height: auto;
+    padding-bottom: 163px;
+}
+
+.first .main.mainPage .mainIntroduce .partner{
+    margin-top: 16px;
+}
+
+.first .main.mainPage .mainIntroduce .partner .row .name{
+    display: inline-block;
+    width:56px;
+    font-family: PingFangSC-Light;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 14px;
+}
+
+.first .main.mainPage .mainIntroduce .partner .row .tipRow{
+    display: inline-block;
+    margin-left: 25px;
+    font-family: PingFangSC-Light;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 14px;
+    margin-top: 10px;
+}
+
+.first .main.mainPage .mainIntroduce .header{
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 16px;
+}
+
+.first .main.mainPage .mainIntroduce .tip{
+    letter-spacing: 0;
+    display: inline-block;
+    font-family: PingFangSC-Light;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 14px;
+    margin-top: 26px;
+    text-indent: 0;
+}
+
+.first .main.mainPage .mainIntroduce .more{
+    opacity: 0.5;
+    display: inline-block;
+    font-family: PingFangSC-Light;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 14px;
+    margin-top: 60px;
+}
+
+.first .main.mainPage .introduce p{
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 24px;
+}
+
+.second .main .unit .line.secondTop{
+    margin-top: 50px;
+}
+
 @media screen and (max-width: 1200px){
+
+    .first .main.mainPage{
+        width: auto;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
     .first .nav{
         padding: 0 5vw;
         width: 100%;
@@ -525,9 +1021,6 @@ footer .main .mainBox .right span a{
         font-size: 60px;
     }
 
-    .first .main .tip{
-        font-size: 35px;
-    }
 
     .first .main .tit{
         font-size: 30px;
@@ -591,10 +1084,6 @@ footer .main .mainBox .right span a{
         font-size: 16px;
     }
 
-    .sixth .main{
-        width: 500px;
-    }
-
     .sixth .main .right .unit .tit{
         font-size: 20px;
     }
@@ -603,18 +1092,56 @@ footer .main .mainBox .right span a{
         font-size: 16px;
     }
 
+    .sixth .main .lineMain{
+        width: 100vw;
+    }
+
+    .sixth .main .lineMain .line{
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    .sixth .main .lineMain .numBox{
+        width: 80vw;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    .sixth .main .lineMain .tipBottom{
+        width: 100vw;
+    }
+
     footer .main{
         width: 100%;
     }
+
+    footer .leftImg{
+        width: 332px;
+        height: 42px;
+    }
+
+    footer .rightImg{
+        width: 332px;
+        height: 42px;
+    }
 }
 
+
+
 @media screen and (max-width: 768px){
+    .first .right li .subMenu li{
+        margin-left: 0;
+    }
     .content {
         padding: 60px 0;
     }
 
     .content .main{
-        margin-top: 60px;
+        margin-top: 110px;
+    }
+
+    .content .main1{
+        margin-top: 135px;
     }
 
     .content .contentTop .tip{
@@ -630,9 +1157,15 @@ footer .main .mainBox .right span a{
     }
 
     .first .nav .left img{
-        height: 10px;
-        width: 40px;
-        margin-top: 15px;
+        height: 7px;
+        width: 24px;
+        margin-top: 11px;
+    }
+
+    .first .nav .left .imgLogo{
+        width: 18px;
+        height: 14px;
+        vertical-align: bottom;
     }
 
     .first .nav .right li{
@@ -688,6 +1221,9 @@ footer .main .mainBox .right span a{
     .second .main p{
         font-size: 14px;
         line-height: 20px;
+    }
+    .second .main .unit{
+        padding-left: 70px;
     }
 
     .third .main .sceneMain .unit{
@@ -753,9 +1289,6 @@ footer .main .mainBox .right span a{
         margin-top:0px;
     }
 
-    .sixth .main{
-        width: 300px;
-    }
 
     .sixth .main .right .unit{
         margin-bottom: 70px;
@@ -778,23 +1311,175 @@ footer .main .mainBox .right span a{
     }
 
     .sixth.content{
-        padding-bottom: 120px;
+        //padding-bottom: 120px;
     }
 
-    footer .main .top{
+    .sixth .main .lineMain{
+        width: 100vw;
+    }
+
+    .sixth .main .lineMain .line{
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    .sixth .main .lineMain .numBox{
+        width: 80vw;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+
+
+    footer .top{
+        position: absolute;
         width: 145px;
         height: 143px;
     }
 
-    footer .main .bottom{
+    footer .bottom{
+        position: absolute;
         height: 100px;
         width: 158px;
     }
 }
 
+@media screen and (max-width: 768px){
+    .sixth .tipBottom{
+        width: 100vw;
+    }
+
+    .sixth .tipBottom span{
+        display: inline-block;
+        margin-left: -10vw;
+    }
+
+    /*footer .leftImg{*/
+        /*width: 166px;*/
+        /*height: 21px;*/
+    /*}*/
+
+    /*footer .rightImg{*/
+        /*width: 166px;*/
+        /*height: 21px;*/
+    /*}*/
+}
+
+@media screen and (max-width: 650px){
+    .first .nav .right .navList{
+        margin-left: 50px;
+    }
+
+    .first .main{
+        width: 80vw;
+        margin: 0 auto;
+        margin-top: calc(50vh - 165px);
+    }
+
+    .first .main h3{
+        letter-spacing: 6px;
+    }
+
+    .first .main .tip{
+        letter-spacing: 20px;
+        text-indent: 20px;
+    }
+}
+
 @media screen and (max-width: 450px){
-    footer{
-        height: 130px;
+    footer .leftImg{
+    width: 166px;
+    height: 21px;
+    }
+
+    footer .rightImg{
+        width: 166px;
+        height: 21px;
+    }
+
+    .second .main .unit .tip p{
+        font-family: PingFangSC-Light;
+    }
+
+    .sixth .main .header{
+        font-size: 16px;
+    }
+
+    .begin .btn{
+        font-size: 14px;
+    }
+
+    .begin .header p{
+        font-size: 16px;
+    }
+
+    .content .contentTop .tip{
+        font-size: 16px;
+    }
+    .first .main h3{
+        font-size: 20px;
+    }
+
+    .first .main .tip{
+        font-size: 16px;
+    }
+    .first .main .introduce .row{
+        font-size: 14px;
+    }
+
+    .first .main .btnBox .btn{
+        font-size: 14px;
+    }
+    .first .main{
+        margin-top: calc(50vh - 245px);
+    }
+
+    .second .main .unit .line.secondTop{
+        margin-top: 67px;
+    }
+
+    .fiveth .main .principleMain .unit .into{
+        font-size: 16px;
+
+    }
+
+    .fiveth .main .principleMain .unit .tip p{
+        font-size: 14px;
+    }
+
+    .second .main .unit{
+        padding-left: 30px;
+    }
+
+    .second .main .unit .header{
+        display: inline-block;
+        font-size: 16px;
+        line-height: 16px;
+        height: 38px;
+    }
+
+    .second .main .unit .tip p{
+        font-size: 14px;
+    }
+
+    .first .nav .right .navList{
+        margin-left: 30px;
+    }
+
+    .first .nav2{
+        height: 116px;
+    }
+
+
+    footer .main .mainBox .left{
+        float: none;
+        margin: 0 auto;
+    }
+
+    footer .main .mainBox .right{
+        float: none;
+        margin: 0 auto;
+        margin-top: 30px;
     }
 
     footer .main .mainBox .left h3{
@@ -817,19 +1502,16 @@ footer .main .mainBox .right span a{
         margin-bottom: 5px;
     }
 
-    footer .main .bottom{
+    footer .bottom{
         width: 30vw;
         height: 18.9vw;
     }
 
-    footer .main .top{
+    footer .top{
         width: 36vw;
         height:17vw;
     }
 
-    footer .main{
-        height: 130px;
-    }
 
     footer .main .mainBox{
         padding-top: 30px;
