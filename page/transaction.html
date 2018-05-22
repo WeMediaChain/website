@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自媒体链</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/css.css">
+    <style>
+        @media screen and (min-height: 906px)  {
+            .first.firstPage{
+                height: calc(100vh - 368px)
+            }
+        }
+    </style>
+</head>
+<body >
+<div id="root" @click="closeMenu" @scroll="addNavClass">
+    <div class="bodyMain">
+        <div class="first firstPage">
+            <nav :class="{'nav2': subMenu, 'nav1': topMenu}">
+                <div class="nav clearfix">
+                    <div class="left">
+                        <a href="../index.html">
+                            <img src="../img/logoimg.png" class="imgLogo">
+                            <img src="../img/login.png" />
+                        </a>
+                    </div>
+                    <div class="right">
+                        <ul class="clearfix">
+                            <li class="navList" @mouseover="clickBtn('0')" @mouseout="closeMenu">
+                                <a class="link" :class="{'active': activeMenu[0] === true || flag == true}" @click.stop="clickBtn('0')">学习</a>
+                                <ul class="subMenu" :class="{'subMenuActive': activeMenu[0]}">
+                                    <li><a href="https://token.im/" target="_blank">imToken钱包</a></li>
+                                    <!--<li><a href="./transaction.html">WMC交易</a></li>-->
+                                </ul>
+                            </li>
+                            <li class="navList" @mouseover="clickBtn('1')" @mouseout="closeMenu">
+                                <a class="link" :class="{'active': activeMenu[1] === true}" @click.stop="clickBtn(1)" @click.stop="clickBtn(1)">关于我们</a>
+                                <ul class="subMenu" :class="{'subMenuActive': activeMenu[1]}">
+                                    <li><a href="./aboutme.html">WMC愿景</a></li>
+                                    <li><a href="../wmc-alpha-0.8.2.pdf" download="">白皮书</a></li>
+                                </ul>
+                            </li>
+                            <li class="navList"><a class="link" href="https://www.jianshu.com/u/16353b4519d9" target="_blank">社区</a></li>
+                            <li class="navList"><a class="link" href="./cooperation.html">合作</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </nav>
+
+            <div class="main mainPage">
+                <div class="introduce">
+                    <p>您可以通过数字货币兑换买入，卖出或交易WMC。</p>
+                    <p>以下是目前列出WMC的交易所清单，在未来几个月内会持续更新，将通过我们的网站及社交媒体渠道公布。</p>
+                    <p>数字资产是创新的投资产品，请您审慎做出投资决策。</p>
+                </div>
+
+                <img src="../img/intervalRed.png" class="midImg"/>
+
+                <div class="mainIntroduce">
+                    <span class="header">目前上市WMC的交易所名单：</span>
+                    <br>
+                    <a href="http://www.btb.com" target="_blank" class="tip">BTB交易所</a>
+                    <br>
+                    <span class="more">更多敬请期待…</span>
+                </div>
+            </div>
+
+            <img src="../img/bottomImg.png" class="bottomImg">
+        </div>
+
+        <footer class="footer">
+            <img src="../img/bottomLeft.png" class="leftImg" />
+            <img src="../img/bottomRight.png" class="rightImg" />
+            <div class="main">
+
+                <div class="mainBox clearfix">
+                    <div class="left">
+                        <h3>相关链接</h3>
+                        <a href="www.mengxiaozhu.cn" target="_blank">萌小助</a>
+                        <a href="https://github.com/WeMediaChain" target="_blank">Github</a>
+                        <a href="https://etherscan.io/token/0x50fb0758dd833a408febf768b566ba1e968d853a" target="_blank">智能合约</a>
+                    </div>
+                    <div class="right">
+                        <h3>联系我们</h3>
+                        <a>service@wemediachain.one</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</div>
+
+
+<script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<script>
+    var top = [];
+    var navLink = $('.nav li a');
+    var nav = $('.nav');
+    const defaultMenu = [false, false];
+    $(document).ready(function () {
+        addNavClass();
+
+        $(window).on('scroll', function () {
+            addNavClass();
+        })
+
+
+        navLink.on('click', function (e) {
+            navLink.removeClass('active');
+            $(e.target).addClass('active');
+        });
+
+        var root = new Vue({
+            el: "#root",
+            data: {
+                subMenu: false,
+                activeMenu: [false, false],
+                topMenu: false,
+                flag: true
+            },
+            methods: {
+                clickBtn: function (num) {
+                    this.subMenu = true;
+                    this.activeMenu.splice(0, this.activeMenu.length, false, false)
+                    this.$set(this.activeMenu, num, true);
+                    this.flag = false;
+                    console.log(this.activeMenu);
+                },
+                closeMenu: function () {
+                    this.subMenu = false;
+                    this.activeMenu.splice(0, this.activeMenu.length, false, false)
+                    this.flag = true;
+                },
+                addNavClass: function (e) {
+                    const offsetHeight = e.target.scrollTop;
+                    var scrolltop = $('.mainBody').scrollTop();
+                    var nav = document.querySelector('nav');
+                    if (offsetHeight > 10) {
+                        this.topMenu = true;
+                    } else {
+                        this.topMenu = false;
+                    }
+                }
+            },
+            mounted: function () {
+                this.addNavClass();
+            }
+        });
+    });
+
+    function addNavClass() {
+        var scrolltop = $(document).scrollTop();
+        var nav = document.querySelector('nav');
+        if (scrolltop > 10) {
+            nav.classList.add('nav1');
+        } else {
+            nav.classList.remove('nav1');
+        }
+    }
+
+
+</script>
+</body>
+</html>

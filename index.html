@@ -10,295 +10,372 @@
 	<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/css.css">
+
 </head>
-<body>
-<div class="first">
-	<nav>
-		<div class="nav clearfix">
-			<div class="left">
-				<a href="#">
-					<img src="./img/login.png" />
-				</a>
+<body >
+<div id="root" @click="closeMenu" @scroll="addNavClass">
+	<div class="bodyMain">
+		<div class="first">
+			<nav :class="{'nav2': subMenu, 'nav1': topMenu}">
+				<div class="nav clearfix">
+					<div class="left">
+						<a href="#">
+							<img src="./img/logoimg.png" class="imgLogo">
+							<img src="./img/login.png" />
+						</a>
+					</div>
+					<div class="right">
+						<ul class="clearfix">
+							<li class="navList"  @mouseover="clickBtn('0')" @mouseout="closeMenu">
+								<a class="link" :class="{'active': activeMenu[0] === true}" @click.stop="clickBtn('0')">学习</a>
+								<ul class="subMenu" :class="{'subMenuActive': activeMenu[0]}">
+									<li><a href="https://token.im/" target="_blank">imToken钱包</a></li>
+									<!--<li><a href="./page/transaction.html">WMC交易</a></li>-->
+								</ul>
+							</li>
+							<li class="navList" @mouseover="clickBtn('1')" @mouseout="closeMenu">
+								<a class="link" :class="{'active': activeMenu[1] === true}" @click.stop="clickBtn('1')">关于我们</a>
+								<ul class="subMenu" :class="{'subMenuActive': activeMenu[1]}">
+									<li><a href="./page/aboutme.html">WMC愿景</a></li>
+									<li><a href="./wmc-alpha-0.8.2.pdf" download="">白皮书</a></li>
+								</ul>
+							</li>
+							<li class="navList"><a class="link" href="https://www.jianshu.com/u/16353b4519d9" target="_blank">社区</a></li>
+							<li class="navList"><a class="link" href="./page/cooperation.html">合作</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</nav>
+
+			<div class="main">
+				<!--
+                <h2>自媒体区块链</h2>
+                <p class="tip">We Media Chain</p>
+
+                <p class="tit">交易预打包</p>
+                <img src="./img/downArrow.png" />
+                <p class="time">正在进行</p>
+
+                <div class="btnBox clearfix">
+                    <a class="btn left" href="https://token.im/" target="_blank">支持imToken</a>
+                    <a class="btn right" href="./wmc-alpha-0.7.pdf" target="_blank">查看白皮书</a>
+                </div>-->
+				<img src="./img/home@3x.png" alt="">
+				<h3>WE MEDIA CHAIN</h3>
+				<p class="tip">自媒体区块链</p>
+				<div class="introduce">
+					<p class="row">WMC是分散且公开的区块链项目，拥有去中心化的账单和交易系统</p>
+					<p class="row">使用加密货币将更安全和公开的展现媒体流量价值，智能合约平台也将促进更丰富的交易模式</p>
+				</div>
+				<div class="btnBox">
+					<a href="./wmc-alpha-0.8.2.pdf" class="btn" download="">白皮书</a>
+				</div>
 			</div>
-			<div class="right">
-				<ul>
-					<li class="navList"><a class="link" href="#second">前景</a></li>
-					<li class="navList"><a class="link" href="#third">场景</a></li>
-					<li class="navList"><a class="link" href="#fourth">技术依赖</a></li>
-					<li class="navList"><a class="link" href="#fiveth">技术原理</a></li>
-					<li class="navList"><a class="link" href="#sixth">开发历程</a></li>
-				</ul>
+			<img class="arrowDown" src="./img/arrowDown.png" />
+		</div>
+
+		<section class="content second" id="second">
+			<div class="contentTop">
+				<img src="./img/prospect2x.png" class="icon" style="width: 23px;height: 40px;"/>
+				<br>
+				<span class="tip">场景</span>
 			</div>
-		</div>
-	
-	</nav>
-	
-	<div class="main">
-		<h2>自媒体区块链</h2>
-		<p class="tip">We Media Chain</p>
-		
-		<p class="tit">交易预打包</p>
-		<img src="./img/downArrow.png" />
-		<p class="time">正在进行</p>
-		
-		<div class="btnBox clearfix">
-			<a class="btn left" href="https://token.im/" target="_blank">支持imToken</a>
-			<a class="btn right" href="./wmc-alpha-0.7.pdf" target="_blank">查看白皮书</a>
-		</div>
+
+			<div class="main clearfix main1">
+				<div class="unit num1">
+					<span class="header">媒体平台及内容生产者</span>
+					<br>
+					<span class="line"></span>
+					<div class="tip">
+						<p>去中心大大简化了商业推广的合作链</p>
+						<p>从而提升效率及保障权益</p>
+						<p>将媒体流量转化为加密货币</p>
+						<p>让价值更胜以往</p>
+					</div>
+				</div>
+				<div class="unit num2">
+					<span class="header" style="position: absolute">营利性机构</span>
+					<br>
+					<span class="line secondTop" ></span>
+					<div class="tip">
+						<p>面对由数据驱动的未来</p>
+						<p>透明的信息无疑将更有利于机构的产品推广</p>
+						<p>真实的数据也将最大化消费者利益</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--
+        <section class="content third" id="third">
+            <div class="contentTop">
+                <img src="./img/scene@2x.png" class="icon" />
+                <br>
+                <span class="tip">场景</span>
+            </div>
+
+            <div class="main">
+                <div class="sceneMain clearfix">
+                    <div class="unit">
+                        <img src="./img/assessment.png" />
+                        <h3>价值评估</h3>
+
+                        <p class="topP">通过媒体数据及交易信息</p>
+                        <p>轻松计算媒体价值</p>
+                    </div>
+                    <div class="unit">
+                        <img src="./img/pay.png" />
+                        <h3>效果付费</h3>
+
+                        <p class="topP">投放费用存放在智能合约中</p>
+                        <p>效果达到自动结算</p>
+                    </div>
+                    <div class="unit">
+                        <img src="./img/guarantee.png" />
+                        <h3>交易担保</h3>
+
+                        <p class="topP">费用及交易标的物安全托管</p>
+                        <p>条件达成自动释放</p>
+                    </div>
+                    <div class="unit" style="margin-right: 0;">
+                        <img src="img/transfer.png" />
+                        <h3>权益转让</h3>
+
+                        <p class="topP">收益安全转移</p>
+                        <p>保证新所有者权益</p>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+		<!--
+        <section class="content fourth" id="fourth">
+            <div class="contentTop">
+                <img src="./img/technical@2x.png" class="icon" />
+                <br>
+                <span class="tip">技术</span>
+            </div>
+
+            <div class="main">
+                <div class="technicalMain clearfix">
+                    <div class="unit unitTop">
+                        <img src="//nzsjtzs2b.qnssl.com/block.png" />
+
+                        <p class="line"></p>
+                        <span class="tip">区块链</span>
+                    </div>
+                    <div class="unit" style="margin-top: 46px;">
+                        <img src="//nzsjtzs2b.qnssl.com/heyue.png" />
+
+                        <p class="line"></p>
+                        <span class="tip">智能合约</span>
+                    </div>
+                    <div class="unit unitTop">
+                        <img src="//nzsjtzs2b.qnssl.com/route.png" />
+
+                        <p class="line"></p>
+                        <span class="tip">数据网关</span>
+                    </div>
+                    <div class="unit" style="margin-right: 0;">
+                        <img src="//nzsjtzs2b.qnssl.com/IPFS.png" />
+
+                        <p class="line"></p>
+                        <span class="tip">IPFS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+		<section class="content fiveth" id="fiveth">
+			<div class="contentTop">
+				<img src="./img/development@2x.png" class="icon" style="width: 26px;height: 40px;"/>
+				<br>
+				<span class="tip">技术</span>
+			</div>
+
+			<div class="main">
+				<div class="principleMain clearfix">
+					<div class="unit">
+						<img src="./img/cube@3x.png" alt="" class="top">
+						<br>
+						<span class="into">零知识证明&智能评分合约</span>
+						<div class="tip">
+							<p>WMC使用新型智能合约</p>
+							<p>使机构可以发布自己的隐匿算法合约</p>
+							<p>将用户数据进行脱敏同时防止二次售卖</p>
+						</div>
+					</div>
+					<div class="unit">
+						<img src="./img/idea@3x.png" alt="" class="top">
+						<br>
+						<span class="into">权益确认</span>
+						<div class="tip">
+							<p>主网上线前采用符合ERC20代币标准</p>
+							<p>可兼容以太坊钱包</p>
+							<p>采用IPFS来存储与原始媒体内容档案</p>
+						</div>
+					</div>
+					<div class="unit">
+						<img src="./img/settings-3@3x.png" alt="" class="top">
+						<br>
+						<span class="into">公证人规则</span>
+						<div class="tip">
+							<p>采取数据公证人制度</p>
+							<p>对数据提供者(见证人)进行群体智慧验证</p>
+							<p>决定是否让结果生效</p>
+						</div>
+					</div>
+				</div>
+				<div class="principleMain clearfix" style="margin-top: 73px;">
+					<div class="unit">
+						<img src="./img/radar@3x.png" style="width: 36px;" class="top">
+						<br>
+						<span class="into">星际文件系统</span>
+						<div class="tip">
+							<p>通过建立星际域名系统</p>
+							<p>为用户提供去中心化的域名解析服务</p>
+							<p>域名唯一且精简可读</p>
+
+						</div>
+					</div>
+					<div class="unit">
+						<img src="./img/transfer@3x.png" alt="" class="top">
+						<br>
+						<span class="into">私密通道</span>
+						<div class="tip">
+							<p>基于时间种子的加密算法</p>
+							<p>为付费的机构建立起与消费者的私密通道</p>
+							<p>阻止骚扰</p>
+						</div>
+					</div>
+					<div class="unit">
+						<img src="./img/cpu@3x.png" alt="" class="top">
+						<br>
+						<span class="into">DPoS</span>
+						<div class="tip">
+							<p>采用DPoS共识机制</p>
+							<p>主节点系统支持百万级TPS</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sixth content">
+			<div class="contentTop">
+				<img src="./img/scene@2x.png" class="icon" style="width: 22px;height: 40px;"/>
+				<br>
+				<span class="tip">WMC Pre-Mining阶段</span>
+			</div>
+			<div class="main">
+				<p class="header">用户当前挖矿获得</p>
+
+				<div class="lineMain">
+					<div class="line">
+						<!--填充-->
+						<!--<div class="now"></div>-->
+						<!--数量-->
+                        <!--<span class="num">11111111</span>-->
+
+						<div class="left cover"></div>
+						<div class="right cover"></div>
+						<div class="top cover"></div>
+						<div class="bottom cover"></div>
+					</div>
+					<div class="numBox clearfix">
+						<span class="left">0</span>
+						<span class="right">900,000,000WMC</span>
+					</div>
+
+				</div>
+			</div>
+			<div class="tipBottom">
+				<span>*参与到合作机构及DApp活动中的用户即可获得</span>
+			</div>
+		</section>
+
+		<section class="begin">
+			<img src="./img/intervalWhite.png" />
+			<div class="header">
+				<p>2018年5月28日</p>
+				<p style="margin-top: 10px;">WMC Pre-Mining即将开始</p>
+			</div>
+			<button class="btn">敬请期待</button>
+		</section>
+
+
+		<footer>
+			<img src="./img/footleft.png" class="bottom" />
+			<img src="./img/footright.png" class="top" />
+			<div class="main">
+				<img src="./img/logoBottom.png" class="logo"/>
+				<div class="mainBox clearfix">
+					<div class="left">
+						<h3>相关链接</h3>
+						<a href="www.mengxiaozhu.cn" target="_blank">萌小助</a>
+						<a href="https://github.com/WeMediaChain" target="_blank">Github</a>
+						<a href="https://etherscan.io/token/0x50fb0758dd833a408febf768b566ba1e968d853a" target="_blank">智能合约</a>
+					</div>
+					<div class="right">
+						<h3>联系我们</h3>
+						<a>service@wemediachain.one</a>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</div>
+
 </div>
 
-<section class="content second" id="second">
-	<div class="contentTop">
-		<img src="./img/prospect2x.png" class="icon" />
-		<br>
-		<span class="tip">前景</span>
-	</div>
-	
-	<div class="main">
-		<p>WMC将原本需要大量担保及评估机构的媒体流量市场转化为更安全、更高效的去中心系统。</p>
-		<p>随着媒体加入与数据进入WeMediaChain，市场壁垒得以建立。</p>
-		
-		<p style="margin-top: 35px;">在区块链中有数据积累的公众号更容易被企业所接受，承认他们的价值。</p>
-		<p>通过WMC进行交易的企业也会更容易被媒体接受，来提升自己的价值与数据积累。</p>
-		
-		<p style="margin-top: 35px;">发生在媒体、流量、广告中的交易都会通过WMC执行，价值交换更高效，数据更透明。</p>
-	</div>
-</section>
-
-<section class="content third" id="third">
-	<div class="contentTop">
-		<img src="./img/scene@2x.png" class="icon" />
-		<br>
-		<span class="tip">场景</span>
-	</div>
-	
-	<div class="main">
-		<div class="sceneMain clearfix">
-			<div class="unit">
-				<img src="./img/assessment.png" />
-				<h3>价值评估</h3>
-				
-				<p class="topP">通过媒体数据及交易信息</p>
-				<p>轻松计算媒体价值</p>
-			</div>
-			<div class="unit">
-				<img src="./img/pay.png" />
-				<h3>效果付费</h3>
-				
-				<p class="topP">投放费用存放在智能合约中</p>
-				<p>效果达到自动结算</p>
-			</div>
-			<div class="unit">
-				<img src="./img/guarantee.png" />
-				<h3>交易担保</h3>
-				
-				<p class="topP">费用及交易标的物安全托管</p>
-				<p>条件达成自动释放</p>
-			</div>
-			<div class="unit" style="margin-right: 0;">
-				<img src="img/transfer.png" />
-				<h3>权益转让</h3>
-				
-				<p class="topP">收益安全转移</p>
-				<p>保证新所有者权益</p>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="content fourth" id="fourth">
-	<div class="contentTop">
-		<img src="./img/technical@2x.png" class="icon" />
-		<br>
-		<span class="tip">技术依赖</span>
-	</div>
-	
-	<div class="main">
-		<div class="technicalMain clearfix">
-			<div class="unit unitTop">
-				<img src="//nzsjtzs2b.qnssl.com/block.png" />
-				
-				<p class="line"></p>
-				<span class="tip">区块链</span>
-			</div>
-			<div class="unit" style="margin-top: 46px;">
-				<img src="//nzsjtzs2b.qnssl.com/heyue.png" />
-				
-				<p class="line"></p>
-				<span class="tip">智能合约</span>
-			</div>
-			<div class="unit unitTop">
-				<img src="//nzsjtzs2b.qnssl.com/route.png" />
-				
-				<p class="line"></p>
-				<span class="tip">数据网关</span>
-			</div>
-			<div class="unit" style="margin-right: 0;">
-				<img src="//nzsjtzs2b.qnssl.com/IPFS.png" />
-				
-				<p class="line"></p>
-				<span class="tip">IPFS</span>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="content fiveth" id="fiveth">
-	<div class="contentTop">
-		<img src="./img/principle@2x.png" class="icon" />
-		<br>
-		<span class="tip">技术原理</span>
-	</div>
-	
-	<div class="main">
-		<div class="principleMain clearfix">
-			<div class="unit">
-				<p class="tit">媒体数据回溯</p>
-				<img src="./img/downArrowColor.png" />
-				<p class="tip">数据永久写入区块链，公开可见</p>
-			</div>
-			<div class="unit">
-				<p class="tit">智能合约交易</p>
-				<img src="./img/downArrowColor.png" />
-				<p class="tip">智能合约完成交易，无需中间人</p>
-			</div>
-			<div class="unit">
-				<p class="tit">真实数据见证</p>
-				<img src="./img/downArrowColor.png" />
-				<p class="tip">数据真实可靠，诚实节点认证</p>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="sixth content" id="sixth">
-	<div class="contentTop">
-		<img src="./img/development@2x.png" class="icon" />
-		<br>
-		<span class="tip">开发历程</span>
-	</div>
-	
-	<div class="main clearfix">
-		<div class="left">
-			<span class="line"></span>
-			<img src="./img/point.png" class="first" />
-			<img src="./img/point.png" class="second" />
-			<img src="./img/point.png" class="third" />
-		</div>
-		<div class="right">
-			<div class="unit">
-				<p class="tit">2018.04 ERC20代币</p>
-				<p class="tip">通过代币证明媒体价值</p>
-			</div>
-			<div class="unit">
-				<p class="tit">2018.06 媒体数据打包</p>
-				<p class="tip">打包媒体数据到区块链，不含交易信息</p>
-			</div>
-			<div class="unit" style="margin-bottom: 0;">
-				<p class="tit">2018.12 区块链&钱包</p>
-				<p class="tip">迁移媒体数据进入独立区块链，发布钱包</p>
-			</div>
-		</div>
-	
-	</div>
-</section>
-
-<footer>
-	<div class="main">
-		<img src="./img/footleft.png" class="bottom" />
-		<img src="./img/footright.png" class="top" />
-		
-		<div class="mainBox clearfix">
-			<div class="left">
-				<h3>相关链接</h3>
-				<a href="https://github.com/WeMediaChain" target="_blank">Github</a>
-				<a href="https://etherscan.io/token/0x50fb0758dd833a408febf768b566ba1e968d853a" target="_blank">智能合约</a>
-			</div>
-			<div class="right">
-				<h3>联系我们</h3>
-				<a href="https://t.me/WeMediaChain" target="_blank">Telegram官方群</a>
-			</div>
-		</div>
-	</div>
-</footer>
 
 <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
 <script>
 	var top = [];
 	var navLink = $('.nav li a');
-	var nav = document.querySelector('nav');
+	var nav = $('.nav');
+	const defaultMenu = [false, false];
 	$(document).ready(function () {
-		addNavClass();
-		getDomHeight();
-		linkAddClass();
-		
-		$(window).on('scroll', function () {
-			addNavClass();
-			linkAddClass();
-		})
-		
-		$(window).resize(function () {
-			getDomHeight();
-		});
-		
-		
-		navLink.on('click', function (e) {
-			navLink.removeClass('active');
-			$(e.target).addClass('active');
+
+
+		var root = new Vue({
+            el: "#root",
+            data: {
+				subMenu: false,
+				activeMenu: [false, false],
+				topMenu: false,
+            },
+            methods: {
+                clickBtn: function (num) {
+                    this.subMenu = true;
+                    this.activeMenu.splice(0, this.activeMenu.length, false, false)
+                    this.$set(this.activeMenu, num, true);
+                    console.log(this.activeMenu);
+				},
+                closeMenu: function () {
+                    this.subMenu = false;
+                    this.activeMenu.splice(0, this.activeMenu.length, false, false)
+				},
+                addNavClass: function (e) {
+                    const offsetHeight = e.target.scrollTop;
+                    var scrolltop = $('.mainBody').scrollTop();
+                    var nav = document.querySelector('nav');
+                    if (offsetHeight > 10) {
+                        this.topMenu = true;
+                    } else {
+                        this.topMenu = false;
+                    }
+                }
+			},
+			mounted: function () {
+				this.addNavClass();
+            }
 		});
 	});
 	
-	function addNavClass() {
-		var scrolltop = $(document).scrollTop();
-		var nav = document.querySelector('nav');
-		if (scrolltop > 10) {
-			nav.classList.add('nav1');
-		} else {
-			nav.classList.remove('nav1');
-		}
-	}
-	
-	function linkAddClass() {
-		var scrolltop = $(document).scrollTop();
-		if (scrolltop < top['second']) {
-			navLink.removeClass('active');
-		}
-		
-		if (scrolltop > top['second']) {
-			navLink.removeClass('active');
-			$(navLink[0]).addClass('active');
-		}
-		
-		if (scrolltop > top['third']) {
-			navLink.removeClass('active');
-			$(navLink[1]).addClass('active');
-		}
-		
-		if (scrolltop > top['fourth']) {
-			navLink.removeClass('active');
-			$(navLink[2]).addClass('active');
-		}
-		
-		if (scrolltop > top['fiveth']) {
-			navLink.removeClass('active');
-			$(navLink[3]).addClass('active');
-		}
-		
-		if (scrolltop > top['sixth']) {
-			navLink.removeClass('active');
-			$(navLink[4]).addClass('active');
-		}
-	}
-	
-	function getDomHeight() {
-		top['second'] = $('#second').offset().top - 1;
-		top['third'] = $('#third').offset().top - 1;
-		top['fourth'] = $('#fourth').offset().top - 1;
-		top['fiveth'] = $('#fiveth').offset().top - 1;
-		top['sixth'] = $('#sixth').offset().top - 1;
-	}
+
+
+
 </script>
 </body>
 </html>
