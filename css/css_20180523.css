@@ -89,6 +89,7 @@ body{
     background-image: linear-gradient(-90deg, rgba(255, 98, 254, .2) 0%, rgba(55, 111, 255, .2) 100%);
     z-index: -1;
     height: 130px;
+    padding-bottom: 25px;
 }
 
 
@@ -861,6 +862,56 @@ footer .main .mainBox .right span a{
     width: 1100px;
     height: auto;
 }
+
+.person-ceo{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 70px;
+}
+
+.person-ceo-left{
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    margin-right: 30px;
+}
+
+.person-ceo-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.person-name{
+    font-family: PingFangSC-Semibold;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.person-job{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.desc-person{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #FFFFFF;
+    margin-top: 15px;
+}
+
+.img-box{
+    width: 16px;
+    height: 6px;
+}
+
+
+
 
 .first.firstPage{
     position: relative;
