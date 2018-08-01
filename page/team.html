@@ -10,7 +10,13 @@
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/css_20180523.css">
-
+    <style>
+        @media screen and (min-height: 906px)  {
+            .first.firstPage{
+                height: calc(100vh - 368px)
+            }
+        }
+    </style>
 </head>
 <body >
 <div id="root" @click="closeMenu" @scroll="addNavClass">
@@ -20,7 +26,7 @@
                 <div class="nav clearfix">
                     <div class="left">
                         <a href="../index.html">
-                            <img src="../img/logoimg.png" class="imgLogo" >
+                            <img src="../img/logoimg.png" class="imgLogo">
                             <img src="../img/login.png" />
                         </a>
                     </div>
@@ -34,7 +40,7 @@
                                 </ul>
                             </li>
                             <li class="navList" @mouseover="clickBtn('1')" @mouseout="closeMenu">
-                                <a class="link" :class="{'active': activeMenu[1] === true}" @click.stop="clickBtn(1)">关于我们</a>
+                                <a class="link" :class="{'active': activeMenu[1] === true || flag == true}" @click.stop="clickBtn(1)">关于我们</a>
                                 <ul class="subMenu" :class="{'subMenuActive': activeMenu[1]}">
                                     <li><a href="./aboutme.html">WMC愿景</a></li>
                                     <li><a href="../wemediachain-0.8.pdf" download="">白皮书</a></li>
@@ -42,7 +48,7 @@
                                 </ul>
                             </li>
                             <li class="navList"><a class="link" href="https://www.jianshu.com/u/16353b4519d9" target="_blank">社区</a></li>
-                            <li class="navList"><a class="link" :class="{'active': flag}" href="./cooperation.html">合作</a></li>
+                            <li class="navList"><a class="link" href="./cooperation.html">合作</a></li>
                         </ul>
                     </div>
                 </div>
@@ -50,60 +56,50 @@
             </nav>
 
             <div class="main mainPage">
-                <div class="introduce">
-                    <p>WeMediaChain是WMC项目的开发和运营的主体，另外我们也拥有BTB、品途、课栈网、百家教育、萌小助、微之家、壹伴等多家优质合作伙伴。</p>
-                    <p>这确保了WMC的质量，并负责将我们的承诺传递给大众。</p>
-                    <p>我们也欢迎有更多认同区块链技术和WMC项目伙伴和我们洽谈合作。</p>
-                </div>
-
-                <div class="contact">
-                    <span class="row">媒体报道: media@wemediachain.one</span>
-                    <br>
-                    <span class="row" style="margin-top: 20px;">机构合作: bd@wemediachain.one</span>
-                </div>
-
-                <img src="../img/intervalRed.png" class="midImg"/>
-
-                <div class="mainIntroduce">
-                    <span class="header">目前WMC的合作伙伴：</span>
-                    <div class="partner">
-                        <div class="row">
-                            <a href="http://www.mengxiaozhu.cn/" target="_blank" class="name">萌小助</a>
-                            <span class="tipRow">核心自媒体服务平台</span>
+                <div class="aboutMain">
+                    <div class="person person-ceo">
+                        <div class="person-ceo-left">
+                            <img style="width: 85px;height: 85px;" src="../img/li-ad.png" alt="">
                         </div>
-                        <div class="row">
-                            <a href="http://www.btb.com/" target="_blank" class="name">BTB</a>
-                            <span class="tipRow">数字资产交易所</span>
+                        <div class="person-ceo-right">
+                            <p class="person-name">Edward</p>
+                            <p class="person-job">WMC首席执行官</p>
+                            <img style="width: 16px;height: 6px;margin: 0" src="../img/devide.png" alt="">
+                            <p class="desc-person">萌小助核心创始人，曾任于腾讯SNG。拥有多年大数据挖掘及项目管理经验，熟悉P2P网络及并发场景设计</p>
                         </div>
-                        <div class="row">
-                            <a href="http://www.pintu360.com/" target="_blank" class="name">品途</a>
-                            <span class="tipRow">商业评论网</span>
-                        </div>
-                        <div class="row">
-                            <a href="http://www.kezhanwang.cn/" target="_blank" class="name">课栈</a>
-                            <span class="tipRow">教育培训咨询</span>
-                        </div>
-                        <div class="row">
-                            <a href="http://www.byguard.com/" target="_blank" class="name">百家教育</a>
-                            <span class="tipRow">大连百家教育集团</span>
-                        </div>
-                        <div class="row">
-                            <a href="http://www.iweizhijia.com/" target="_blank" class="name">微之家</a>
-                            <span class="tipRow">自媒体服务平台</span>
-                        </div>
-
                     </div>
-                    <span class="more">更多敬请期待…</span>
+                    <div class="person person-ceo">
+                        <div class="person-ceo-left">
+                            <img style="width: 85px;height: 85px;" src="../img/DISAS-ad.png" alt="">
+                        </div>
+                        <div class="person-ceo-right">
+                            <p class="person-name">Disac</p>
+                            <p class="person-job">WMC首席信息官</p>
+                            <img style="width: 16px;height: 6px;" src="../img/devide.png" alt="">
+                            <p class="desc-person">萌小助架构师，擅长区块链与中心业务对接及架构设计，丰富的项目管理及工程化架构设计经验</p>
+                        </div>
+                    </div>
+                    <div class="person person-ceo">
+                        <div class="person-ceo-left">
+                            <img style="width: 85px;height: 85px;" src="../img/Aaron-ad.png" alt="">
+                        </div>
+                        <div class="person-ceo-right">
+                            <p class="person-name">Aaron</p>
+                            <p class="person-job">WMC首席技术官</p>
+                            <img style="width: 16px;height: 6px;" src="../img/devide.png" alt="">
+                            <p class="desc-person">原今日头条架构师，擅长区块链架构设计大数据、工作量证明算法优化，密码学专家</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <img src="../img/bottomImg.png" class="bottomImg">
         </div>
-
         <footer class="footer">
             <img src="../img/bottomLeft.png" class="leftImg" />
             <img src="../img/bottomRight.png" class="rightImg" />
             <div class="main">
+
 
                 <div class="mainBox clearfix">
                     <div class="left">
@@ -138,7 +134,7 @@
                 subMenu: false,
                 activeMenu: [false, false],
                 topMenu: false,
-                flag: true
+                flag: true,
             },
             methods: {
                 clickBtn: function (num) {
@@ -175,3 +171,4 @@
 </script>
 </body>
 </html>
+
