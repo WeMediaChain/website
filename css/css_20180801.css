@@ -1,33 +1,31 @@
-
 @keyframes iconAnimation {
-    0%{
-        transform:translate(0, 0);
+    0% {
+        transform: translate(0, 0);
     }
 
-    25%{
-        transform:translate(0, -5px);
+    25% {
+        transform: translate(0, -5px);
     }
 
-    75%{
-        transform:translate(0, 5px);
+    75% {
+        transform: translate(0, 5px);
     }
 
-    100%{
-        transform:translate(0, 0);
+    100% {
+        transform: translate(0, 0);
     }
 }
 
-body{
+body {
     overflow-x: hidden;
 }
 
-#root{
+#root {
     height: 100vh;
     overflow-y: scroll;
 }
 
-
-.first{
+.first {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -35,7 +33,7 @@ body{
     overflow: hidden;
 }
 
-.first .arrowDown{
+.first .arrowDown {
     position: absolute;
     height: 7px;
     width: 18px;
@@ -44,7 +42,7 @@ body{
     margin-left: -9px;
 }
 
-.first nav{
+.first nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -53,19 +51,19 @@ body{
     z-index: 100;
 }
 
-.first .nav{
+.first .nav {
     height: 54px;
     width: 1100px;
-    margin:0 auto;
+    margin: 0 auto;
     color: #fff;
 }
 
-.first .nav1{
+.first .nav1 {
     color: #fff;
-    background: rgba(18,18,18, .8);
+    background: rgba(18, 18, 18, .8);
 }
 
-.first .nav1:after{
+.first .nav1:after {
     position: absolute;
     content: '';
     width: 100%;
@@ -75,13 +73,13 @@ body{
     z-index: -1;
 }
 
-.first .nav2{
+.first .nav2 {
     color: #fff;
-    background: rgba(18,18,18, .8);
+    background: rgba(18, 18, 18, .8);
     height: 130px;
 }
 
-.first .nav2:after{
+.first .nav2:after {
     position: absolute;
     content: '';
     width: 100%;
@@ -92,102 +90,101 @@ body{
     padding-bottom: 25px;
 }
 
-
 .first .nav .left {
     float: left;
     opacity: 1;
 }
 
-.first .nav .left img{
+.first .nav .left img {
     width: 48px;
     height: 14px;
     margin-top: 13px;
 }
 
-.first .nav .left .imgLogo{
+.first .nav .left .imgLogo {
     width: 32px;
     height: 25px;
     vertical-align: sub;
-    margin-right:3px;
+    margin-right: 3px;
 }
 
-.first .nav .right{
+.first .nav .right {
     float: right;
     opacity: 1;
 }
 
-.first .nav .right .navList{
+.first .nav .right .navList {
     float: left;
     margin-left: 100px;
 }
 
-.first .nav .right li a{
+.first .nav .right li a {
     font-family: PingFangTC-Light;
     display: inline-block;
     height: 50px;
     line-height: 54px;
     color: #fff;
     font-size: 14px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.first .nav .right li ul li a{
+.first .nav .right li ul li a {
     font-family: PingFangTC-Thin;
     font-size: 14px;
     color: #FFFFFF;
     line-height: 14px;
-    height:30px;
+    height: 30px;
 }
 
-.first nav .right li a.active{
+.first nav .right li a.active {
     font-family: PingFangTC-Semibold;
     border-bottom: 2px solid transparent;
     border-image: -webkit-linear-gradient(left, #FF00EF, #1F01FF) 2 2;
 }
 
-.first .right li .subMenu{
+.first .right li .subMenu {
     display: none;
     position: absolute;
     padding-top: 8px;
 }
 
-.first .right li .subMenuActive{
+.first .right li .subMenuActive {
     display: block;
 }
 
-.first .right li .subMenu li{
+.first .right li .subMenu li {
     height: 30px;
     line-height: 30px;
 }
 
-.first .main{
+.first .main {
     text-align: center;
     height: 421px;
     margin-top: calc(50vh - 200px);
 }
 
-.first .main h2{
+.first .main h2 {
     font-family: PingFangSC-Regular;
     font-size: 68px;
     color: #FFFFFF;
     line-height: 64px;
 }
 
-.first .main h3{
+.first .main h3 {
     font-family: AvenirNext-Regular;
     font-size: 26px;
     color: #FFFFFF;
     line-height: 32px;
-    letter-spacing:12px;
+    letter-spacing: 12px;
     text-align: center;
     margin-top: 25px;
 }
 
-.first .main .introduce{
+.first .main .introduce {
     margin-top: 80px;
 }
 
-.first .main .introduce .row{
+.first .main .introduce .row {
     font-family: PingFangSC-Light;
     font-size: 16px;
     color: #FFFFFF;
@@ -195,17 +192,17 @@ body{
     margin-bottom: 10px;
 }
 
-.first .main .tip{
+.first .main .tip {
     font-family: PingFangSC-Light;
     font-size: 16px;
     color: #FFFFFF;
     line-height: 16px;
-    letter-spacing:40px;
+    letter-spacing: 40px;
     text-indent: 40px;
     margin-top: 20px;
 }
 
-.first .main .tit{
+.first .main .tit {
     font-family: PingFangSC-Regular;
     font-size: 28px;
     color: #FFFFFF;
@@ -213,13 +210,13 @@ body{
     margin-top: 70px;
 }
 
-.first .main img{
+.first .main img {
     display: inline-block;
     width: 167px;
     height: 101px;
 }
 
-.first .main .time{
+.first .main .time {
     margin-top: 10px;
     font-family: PingFangSC-Regular;
     font-size: 34px;
@@ -227,7 +224,7 @@ body{
     line-height: 36px;
 }
 
-.first .main .btnBox{
+.first .main .btnBox {
     margin: 0 auto;
     margin-top: 60px;
     width: 420px;
@@ -249,46 +246,46 @@ body{
     float: left;
 }
 
-.first .main .btnBox .right{
+.first .main .btnBox .right {
     float: right;
 }
 
-.content{
+.content {
     padding-top: 200px;
     padding-bottom: 100px;
     background: #121212;
     overflow: hidden;
 }
 
-.content .contentTop{
+.content .contentTop {
     text-align: center;
     color: #fff;
 }
 
-.content .main{
+.content .main {
     margin: 0 auto;
     margin-top: 100px;
-    width:1100px;
+    width: 1100px;
 }
 
-.content .contentTop .tip{
+.content .contentTop .tip {
     display: inline-block;
     font-family: PingFangSC-Thin;
     font-size: 20px;
     color: #FFFFFF;
     line-height: 20px;
     margin-top: 10px;
-    padding-right:4px;
+    padding-right: 4px;
 }
 
-.second .icon{
+.second .icon {
     display: inline-block;
     height: 54px;
     width: 25px;
     animation: iconAnimation 2s linear infinite;
 }
 
-.second .main .unit{
+.second .main .unit {
     position: relative;
     float: left;
     width: 50%;
@@ -320,14 +317,14 @@ body{
     margin-top: -60px;
 }
 
-.second .main .unit .header{
+.second .main .unit .header {
     font-family: PingFangSC-Regular;
     font-size: 20px;
     color: #FFFFFF;
     line-height: 20px;
 }
 
-.second .main .unit .line{
+.second .main .unit .line {
     display: inline-block;
     height: 1px;
     width: 15px;
@@ -335,46 +332,46 @@ body{
     margin-top: 30px;
 }
 
-.second .main .unit .tip{
+.second .main .unit .tip {
     margin-top: 22px;
 }
 
-.second .main .unit .tip p{
+.second .main .unit .tip p {
     font-family: PingFangSC-Thin;
     font-size: 16px;
     color: #FFFFFF;
     line-height: 24px;
 }
 
-.third .icon{
+.third .icon {
     display: inline-block;
     height: 54px;
     width: 23px;
     animation: iconAnimation 2s linear infinite;
 }
 
-.fourth .icon{
+.fourth .icon {
     display: inline-block;
     height: 54px;
     width: 25px;
     animation: iconAnimation 2s linear infinite;
 }
 
-.fiveth .icon{
+.fiveth .icon {
     display: inline-block;
     height: 54px;
     width: 25px;
     animation: iconAnimation 2s linear infinite;
 }
 
-.sixth .icon{
+.sixth .icon {
     display: inline-block;
     height: 54px;
     width: 25px;
     animation: iconAnimation 2s linear infinite;
 }
 
-.second .main{
+.second .main {
     max-width: 1100px;
     margin: 0 auto;
     margin-top: 220px;
@@ -382,14 +379,14 @@ body{
     color: #fff;
 }
 
-.second .main p{
+.second .main p {
     font-family: PingFangSC-Regular;
     font-size: 22px;
     color: #FFFFFF;
     line-height: 30px;
 }
 
-.third .main .sceneMain{
+.third .main .sceneMain {
 }
 
 .third .main .sceneMain .unit {
@@ -408,7 +405,7 @@ body{
     height: 32px;
 }
 
-.third .main .sceneMain .unit h3{
+.third .main .sceneMain .unit h3 {
     font-family: PingFangSC-Regular;
     font-size: 22px;
     color: #FFFFFF;
@@ -416,7 +413,7 @@ body{
     margin-top: 16px;
 }
 
-.third .main .sceneMain .unit p{
+.third .main .sceneMain .unit p {
     opacity: 0.8;
     font-family: PingFangSC-Regular;
 
@@ -425,50 +422,50 @@ body{
     line-height: 30px;
 }
 
-.third .main .sceneMain .unit .topP{
+.third .main .sceneMain .unit .topP {
     margin-top: 26px;
 }
 
-.fourth .main .technicalMain .unit{
+.fourth .main .technicalMain .unit {
     float: left;
     margin-right: 73px;
 }
 
-.fourth .main .technicalMain .unit img{
+.fourth .main .technicalMain .unit img {
     width: 220px;
     height: 220px;
 }
 
-.fourth .main .technicalMain .unitTop{
+.fourth .main .technicalMain .unitTop {
     margin-top: 110px;
 }
 
-.fourth .main .technicalMain .unit .line{
+.fourth .main .technicalMain .unit .line {
     width: 30px;
     height: 3px;
     background-image: linear-gradient(-90deg, #FF62F5 0%, #376FFF 100%);
     margin-top: 24px;
 }
 
-.fourth .main .technicalMain .unit .tip{
+.fourth .main .technicalMain .unit .tip {
     display: inline-block;
     margin-top: 24px;
     color: #fff;
 }
 
-.fiveth .main .principleMain .unit{
+.fiveth .main .principleMain .unit {
     width: 33.33%;
     float: left;
     text-align: center;
     font-size: 0;
 }
 
-.fiveth .main .principleMain .unit .top{
+.fiveth .main .principleMain .unit .top {
     width: 40px;
     height: 40px;
 }
 
-.fiveth .main .principleMain .unit .into{
+.fiveth .main .principleMain .unit .into {
     font-family: PingFangSC-Regular;
     display: inline-block;
     font-size: 18px;
@@ -477,23 +474,24 @@ body{
     margin-top: 40px;
 }
 
-.fiveth .main .principleMain .unit .tip p{
+.fiveth .main .principleMain .unit .tip p {
     font-family: PingFangSC-Thin;
     font-size: 16px;
     color: #FFFFFF;
     line-height: 24px;
 }
 
-.fiveth .main .principleMain .unit p{
+.fiveth .main .principleMain .unit p {
 }
-.fiveth .main .principleMain .unit .tit{
+
+.fiveth .main .principleMain .unit .tit {
     font-family: PingFangSC-Regular;
     font-size: 24px;
     color: #FFFFFF;
     line-height: 24px;
 }
 
-.fiveth .main .principleMain .unit .tip{
+.fiveth .main .principleMain .unit .tip {
     font-family: PingFangSC-Regular;
     font-size: 18px;
     color: #FFFFFF;
@@ -501,15 +499,14 @@ body{
     margin-top: 27px;
 }
 
-.fiveth .main .principleMain .unit img{
+.fiveth .main .principleMain .unit img {
     display: inline-block;
     width: 18px;
     height: 8px;
     margin-top: 27px;
 }
 
-
-.point{
+.point {
     width: 12px;
     height: 12px;
     background-image: linear-gradient(-160deg, #FF62F5 0%, #376FFF 100%);
@@ -517,13 +514,11 @@ body{
     box-shadow: 0 0 0 4px #FF62F5;
 }
 
-
-.sixth.content{
-    //padding-bottom: 120px;
+.sixth.content {
+/ / padding-bottom: 120 px;
 }
 
-
-.sixth .main .left .line{
+.sixth .main .left .line {
     height: 360px;
     display: inline-block;
     border-left: 1px dashed #fff;
@@ -538,19 +533,19 @@ body{
     height: 20px;
 }
 
-.sixth .main .left .first{
+.sixth .main .left .first {
     top: 20px;
 }
 
-.sixth .main .left .second{
+.sixth .main .left .second {
     top: 210px;
 }
 
-.sixth .main .left .third{
+.sixth .main .left .third {
     top: 400px;
 }
 
-.sixth .main .right{
+.sixth .main .right {
     flaot: right;
 }
 
@@ -558,14 +553,14 @@ body{
     margin-bottom: 130px;
 }
 
-.sixth .main .right .unit .tit{
+.sixth .main .right .unit .tit {
     font-family: PingFangSC-Light;
     font-size: 28px;
     color: #FFFFFF;
     line-height: 28px;
 }
 
-.sixth .main .right .unit .tip{
+.sixth .main .right .unit .tip {
     font-family: PingFangSC-Light;
     font-size: 20px;
     color: #FFFFFF;
@@ -573,7 +568,7 @@ body{
     margin-top: 10px;
 }
 
-.sixth .main .header{
+.sixth .main .header {
     font-family: PingFangSC-Light;
     font-size: 18px;
     color: #FFFFFF;
@@ -582,7 +577,7 @@ body{
     text-align: center;
 }
 
-.sixth .main .lineMain{
+.sixth .main .lineMain {
     width: 1000px;
     margin: 0 auto;
     margin-top: 86px;
@@ -592,7 +587,7 @@ body{
     line-height: 14px;
 }
 
-.sixth  .tipBottom{
+.sixth .tipBottom {
     font-family: PingFangSC-Light;
     font-size: 14px;
     color: #FFFFFF;
@@ -601,34 +596,34 @@ body{
     margin-top: 20px;
 }
 
-.sixth .main .lineMain .numBox{
+.sixth .main .lineMain .numBox {
     margin-top: 10px;
     height: 14px;
 }
 
-.sixth .main .lineMain .left{
+.sixth .main .lineMain .left {
     float: left;
 }
 
-.sixth .main .lineMain .right{
+.sixth .main .lineMain .right {
     float: right;
 }
 
-.sixth .main .lineMain .line{
+.sixth .main .lineMain .line {
     position: relative;
     width: 1000px;
     height: 16px;
     background: #fff;
 }
 
-.sixth .main .lineMain .line .now{
+.sixth .main .lineMain .line .now {
     display: inline-block;
     background-image: linear-gradient(90deg, #FF00EF 0%, #1F01FF 100%);
     width: 50%;
     height: 16px;
 }
 
-.sixth .main .lineMain .line .num{
+.sixth .main .lineMain .line .num {
     position: absolute;
     font-family: PingFangSC-Light;
     font-size: 14px;
@@ -640,7 +635,7 @@ body{
     transform: translate(-50%, 0);
 }
 
-.sixth .main .lineMain .line .left{
+.sixth .main .lineMain .line .left {
     position: absolute;
     top: 0;
     left: 0;
@@ -651,7 +646,7 @@ body{
     border-left: 4px solid #121212;
 }
 
-.sixth .main .lineMain .line .right{
+.sixth .main .lineMain .line .right {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -662,7 +657,7 @@ body{
     border-left: 4px solid #121212;
 }
 
-.sixth .main .lineMain .line .top{
+.sixth .main .lineMain .line .top {
     position: absolute;
     top: 0;
     right: 0;
@@ -673,7 +668,7 @@ body{
     border-right: 4px solid #121212;
 }
 
-.sixth .main .lineMain .line .bottom{
+.sixth .main .lineMain .line .bottom {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -684,23 +679,23 @@ body{
     border-right: 4px solid #121212;
 }
 
-.begin{
+.begin {
     background: #121212;
     padding-bottom: 300px;
 }
 
-.begin img{
+.begin img {
     display: block;
     height: 6px;
     width: 18px;
     margin: 0 auto;
 }
 
-.begin .header{
+.begin .header {
     margin-top: 120px;
 }
 
-.begin .header p{
+.begin .header p {
     font-family: PingFangSC-Regular;
     font-size: 18px;
     color: #FFFFFF;
@@ -708,7 +703,7 @@ body{
     text-align: center;
 }
 
-.begin .btn{
+.begin .btn {
     height: 40px;
     width: 128px;
     display: block;
@@ -720,30 +715,30 @@ body{
     background: transparent;
     margin-top: 40px;
     border: 1px solid transparent;
-    border-image: -webkit-linear-gradient(left,#FF00EF,#1F01FF) 1 1;
+    border-image: -webkit-linear-gradient(left, #FF00EF, #1F01FF) 1 1;
 }
 
-footer{
+footer {
     position: relative;
     height: 306px;
     background: #181818;
 
 }
 
-footer .main .logo{
+footer .main .logo {
     position: static;
-    height:22px;
+    height: 22px;
     width: 28px;
     display: block;
     margin: 0 auto;
     margin-top: 60px;
 }
 
-footer .main{
+footer .main {
     position: relative;
     width: 1100px;
     height: 306px;
-    margin:0 auto;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -751,7 +746,7 @@ footer .main img {
     position: absolute;
 }
 
-footer  .bottom{
+footer .bottom {
     position: absolute;
     bottom: 0;
     left: 10vw;
@@ -759,7 +754,7 @@ footer  .bottom{
     height: 199px;
 }
 
-footer  .top{
+footer .top {
     position: absolute;
     top: 0;
     right: 0;
@@ -767,23 +762,23 @@ footer  .top{
     height: 185px;
 }
 
-footer  .leftImg {
+footer .leftImg {
     position: absolute;
-    bottom:0;
+    bottom: 0;
     left: 5vw;
-    width:531px;
-    height:61px;
+    width: 531px;
+    height: 61px;
 }
 
-footer  .rightImg {
+footer .rightImg {
     position: absolute;
-    bottom:0;
+    bottom: 0;
     right: 5vw;
-    width:531px;
-    height:61px;
+    width: 531px;
+    height: 61px;
 }
 
-footer .main .mainBox{
+footer .main .mainBox {
     padding-top: 60px;
     width: 420px;
     margin: 0 auto;
@@ -795,7 +790,7 @@ footer .main .mainBox .left {
     text-align: center;
 }
 
-footer .main .mainBox .left h3{
+footer .main .mainBox .left h3 {
     font-family: PingFangSC-Light;
     font-size: 14px;
     color: #FFFFFF;
@@ -803,7 +798,7 @@ footer .main .mainBox .left h3{
     margin-bottom: 20px;
 }
 
-footer .main .mainBox .left a{
+footer .main .mainBox .left a {
     display: inline-block;
     font-family: PingFangSC-Thin;
     font-size: 14px;
@@ -812,7 +807,7 @@ footer .main .mainBox .left a{
     margin-bottom: 10px;
 }
 
-footer .main .mainBox .right{
+footer .main .mainBox .right {
     float: right;
     width: 160px;
     text-align: center;
@@ -826,7 +821,7 @@ footer .main .mainBox .right h3 {
     margin-bottom: 20px;
 }
 
-footer .main .mainBox .right a{
+footer .main .mainBox .right a {
     font-family: PingFangSC-Thin;
     display: inline-block;
     font-size: 14px;
@@ -834,21 +829,22 @@ footer .main .mainBox .right a{
     line-height: 14px;
     margin-bottom: 10px;
 }
-footer .main .mainBox .right span{
+
+footer .main .mainBox .right span {
     font-family: PingFangSC-Thin;
     font-size: 14px;
     color: #FFFFFF;
     line-height: 14px;
 }
 
-footer .main .mainBox .right span a{
+footer .main .mainBox .right span a {
     font-family: PingFangSC-Thin;
     font-size: 14px;
     color: #FFFFFF;
     line-height: 14px;
 }
 
-.footer{
+.footer {
     height: 205px;
 }
 
@@ -856,54 +852,60 @@ footer .main .mainBox .right span a{
     height: 205px;
 }
 
-.first .main.mainPage{
-    margin:0 auto;
+.first .main.mainPage {
+    margin: 0 auto;
     margin-top: 210px;
     width: 1100px;
     height: auto;
 }
 
-.person-ceo{
+.person-ceo {
     display: flex;
     flex-direction: row;
     margin-bottom: 70px;
 }
 
-.person-ceo-left{
+.person-ceo-left {
     border-radius: 50%;
-    width: 85px;
+    width: 128px;
     height: 85px;
     margin-right: 30px;
+
 }
 
-.person-ceo-right{
+.person-ceo-left img {
+    width: 128px;
+    height: 85px;
+}
+
+.person-ceo-right {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     text-align: left;
 }
 
-
-.person-team{
+.person-team {
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: 70px;
 }
 
-.person-team-right{
+.person-team-right {
     border-radius: 50%;
     width: 85px;
     height: 85px;
     margin-right: 30px;
 }
 
-.person-team-left{
+.person-team-left {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     text-align: right;
 }
-.team-name{
+
+.team-name {
     font-family: PingFangSC-Semibold;
     font-size: 16px;
     color: #FFFFFF;
@@ -911,7 +913,7 @@ footer .main .mainBox .right span a{
     text-align: right;
 }
 
-.team-job{
+.team-job {
     font-family: PingFangSC-Regular;
     font-size: 12px;
     color: #FFFFFF;
@@ -919,7 +921,7 @@ footer .main .mainBox .right span a{
     text-align: right;
 }
 
-.person-name{
+.person-name {
     font-family: PingFangSC-Semibold;
     font-size: 16px;
     color: #FFFFFF;
@@ -927,7 +929,7 @@ footer .main .mainBox .right span a{
     text-align: left;
 }
 
-.person-job{
+.person-job {
     font-family: PingFangSC-Regular;
     font-size: 12px;
     color: #FFFFFF;
@@ -935,7 +937,7 @@ footer .main .mainBox .right span a{
     text-align: left;
 }
 
-.desc-person{
+.desc-person {
     font-family: PingFangSC-Regular;
     font-size: 12px;
     color: #FFFFFF;
@@ -943,19 +945,16 @@ footer .main .mainBox .right span a{
     text-align: left;
 }
 
-.img-box{
+.img-box {
     width: 16px;
     height: 6px;
 }
 
-
-
-
-.first.firstPage{
+.first.firstPage {
     position: relative;
 }
 
-.first.firstPage .bottomImg{
+.first.firstPage .bottomImg {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -963,21 +962,22 @@ footer .main .mainBox .right span a{
     width: 832px;
 }
 
-.first .main.mainPage .aboutMain{}
+.first .main.mainPage .aboutMain {
+}
 
-.first .main.mainPage .aboutMain .row{
+.first .main.mainPage .aboutMain .row {
     text-align: left;
     margin-bottom: 40px;
 }
 
-.first .main.mainPage .aboutMain .row .left{
+.first .main.mainPage .aboutMain .row .left {
     height: 9px;
     width: 8px;
     float: left;
     margin-top: 7px;
 }
 
-.first .main.mainPage .aboutMain .row .right{
+.first .main.mainPage .aboutMain .row .right {
     display: block;
     margin-left: 18px;
     font-family: PingFangSC-Regular;
@@ -986,12 +986,12 @@ footer .main .mainBox .right span a{
     line-height: 24px;
 }
 
-.first .main.mainPage .contact{
+.first .main.mainPage .contact {
     margin-top: 50px;
     text-align: left;
 }
 
-.first .main.mainPage .contact .row{
+.first .main.mainPage .contact .row {
     display: inline-block;
     font-family: PingFangSC-Regular;
     font-size: 14px;
@@ -999,43 +999,43 @@ footer .main .mainBox .right span a{
     line-height: 14px;
 }
 
-.first .main.mainPage .midImg{
+.first .main.mainPage .midImg {
     display: block;
     height: 6px;
     width: 18px;
     margin-top: 60px;
 }
 
-.first .main.mainPage .introduce{
+.first .main.mainPage .introduce {
     text-align: left;
     margin: 0 auto;
 
 }
 
-.first .main.mainPage .mainIntroduce{
+.first .main.mainPage .mainIntroduce {
     text-align: left;
     margin-top: 60px;
 }
 
-.first.firstPage{
+.first.firstPage {
     height: auto;
     padding-bottom: 163px;
 }
 
-.first .main.mainPage .mainIntroduce .partner{
+.first .main.mainPage .mainIntroduce .partner {
     margin-top: 16px;
 }
 
-.first .main.mainPage .mainIntroduce .partner .row .name{
+.first .main.mainPage .mainIntroduce .partner .row .name {
     display: inline-block;
-    width:56px;
+    width: 56px;
     font-family: PingFangSC-Light;
     font-size: 14px;
     color: #FFFFFF;
     line-height: 14px;
 }
 
-.first .main.mainPage .mainIntroduce .partner .row .tipRow{
+.first .main.mainPage .mainIntroduce .partner .row .tipRow {
     display: inline-block;
     margin-left: 25px;
     font-family: PingFangSC-Light;
@@ -1045,14 +1045,14 @@ footer .main .mainBox .right span a{
     margin-top: 10px;
 }
 
-.first .main.mainPage .mainIntroduce .header{
+.first .main.mainPage .mainIntroduce .header {
     font-family: PingFangSC-Regular;
     font-size: 16px;
     color: #FFFFFF;
     line-height: 16px;
 }
 
-.first .main.mainPage .mainIntroduce .tip{
+.first .main.mainPage .mainIntroduce .tip {
     letter-spacing: 0;
     display: inline-block;
     font-family: PingFangSC-Light;
@@ -1063,7 +1063,7 @@ footer .main .mainBox .right span a{
     text-indent: 0;
 }
 
-.first .main.mainPage .mainIntroduce .more{
+.first .main.mainPage .mainIntroduce .more {
     opacity: 0.5;
     display: inline-block;
     font-family: PingFangSC-Light;
@@ -1073,249 +1073,248 @@ footer .main .mainBox .right span a{
     margin-top: 60px;
 }
 
-.first .main.mainPage .introduce p{
+.first .main.mainPage .introduce p {
     font-family: PingFangSC-Regular;
     font-size: 16px;
     color: #FFFFFF;
     line-height: 24px;
 }
 
-.second .main .unit .line.secondTop{
+.second .main .unit .line.secondTop {
     margin-top: 50px;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
 
-    .first .main.mainPage{
+    .first .main.mainPage {
         width: auto;
         margin-left: 5vw;
         margin-right: 5vw;
     }
 
-    .first .nav{
+    .first .nav {
         padding: 0 5vw;
         width: 100%;
         box-sizing: border-box;
     }
 
-    .content .main{
+    .content .main {
         width: 100%;
     }
 
-    .fourth .main .technicalMain .unit .tip{
+    .fourth .main .technicalMain .unit .tip {
         font-size: 18px;
     }
 
-    .first .main h2{
+    .first .main h2 {
         font-size: 60px;
     }
 
-
-    .first .main .tit{
+    .first .main .tit {
         font-size: 30px;
     }
 
-    .first .main .time{
+    .first .main .time {
         font-size: 30px;
     }
 
-    .second .main{
+    .second .main {
         padding: 0 5vw;
         box-sizing: border-box;
     }
 
-    .third .main{
+    .third .main {
         width: 100%;
     }
 
-    .third .main .sceneMain{
+    .third .main .sceneMain {
         width: 94vw;
         margin: 0 auto;
     }
 
-    .third .main .sceneMain .unit{
+    .third .main .sceneMain .unit {
         margin-right: 2vw;
         width: calc(22vw - 6px);
         box-sizing: content-box;
     }
 
-    .third .main .sceneMain .unit h3{
+    .third .main .sceneMain .unit h3 {
         font-size: 20px;
     }
 
-    .third .main .sceneMain .unit p{
+    .third .main .sceneMain .unit p {
         font-size: 15px;
     }
 
-    .fourth .main .technicalMain{
+    .fourth .main .technicalMain {
         margin: 0 auto;
         width: 92vw;
     }
 
-    .fourth .main .technicalMain .unit{
+    .fourth .main .technicalMain .unit {
         margin-right: 4vw;
     }
 
-    .fourth .main .technicalMain .unit img{
+    .fourth .main .technicalMain .unit img {
         height: 20vw;
         width: 20vw;
     }
 
-    .fiveth .main .principleMain{
+    .fiveth .main .principleMain {
         margin: 0 4vw;
     }
 
-    .fiveth .main .principleMain .unit .tit{
+    .fiveth .main .principleMain .unit .tit {
         font-size: 20px;
     }
 
-    .fiveth .main .principleMain .unit .tip{
+    .fiveth .main .principleMain .unit .tip {
         font-size: 16px;
     }
 
-    .sixth .main .right .unit .tit{
+    .sixth .main .right .unit .tit {
         font-size: 20px;
     }
 
-    .sixth .main .right .unit .tip{
+    .sixth .main .right .unit .tip {
         font-size: 16px;
     }
 
-    .sixth .main .lineMain{
+    .sixth .main .lineMain {
         width: 100vw;
     }
 
-    .sixth .main .lineMain .line{
+    .sixth .main .lineMain .line {
         width: 80vw;
         margin: 0 auto;
     }
 
-    .sixth .main .lineMain .numBox{
+    .sixth .main .lineMain .numBox {
         width: 80vw;
         margin: 0 auto;
         margin-top: 10px;
     }
 
-    .sixth .main .lineMain .tipBottom{
+    .sixth .main .lineMain .tipBottom {
         width: 100vw;
     }
 
-    footer .main{
+    footer .main {
         width: 100%;
     }
 
-    footer .leftImg{
+    footer .leftImg {
         width: 332px;
         height: 42px;
     }
 
-    footer .rightImg{
+    footer .rightImg {
         width: 332px;
         height: 42px;
     }
 }
 
-
-
-@media screen and (max-width: 768px){
-    .first .right li .subMenu li{
+@media screen and (max-width: 768px) {
+    .first .right li .subMenu li {
         margin-left: 0;
     }
+
     .content {
         padding: 60px 0;
     }
 
-    .content .main{
+    .content .main {
         margin-top: 110px;
     }
 
-    .content .main1{
+    .content .main1 {
         margin-top: 135px;
     }
 
-    .content .contentTop .tip{
+    .content .contentTop .tip {
         font-size: 20px;
     }
 
-    .first nav{
+    .first nav {
         height: 40px;
     }
 
-    .first .nav{
+    .first .nav {
         height: 40px;
     }
 
-    .first .nav .left img{
+    .first .nav .left img {
         height: 7px;
         width: 24px;
         margin-top: 11px;
     }
 
-    .first .nav .left .imgLogo{
+    .first .nav .left .imgLogo {
         width: 18px;
         height: 14px;
         vertical-align: bottom;
     }
 
-    .first .nav .right li{
+    .first .nav .right li {
         margin-left: 20px;
     }
 
-    .first .nav .right li a{
+    .first .nav .right li a {
         font-size: 12px;
         line-height: 40px;
         height: 40px;
     }
 
-    .first .main{
+    .first .main {
         margin-top: calc(50vh - 165px);
     }
 
-    .first .main h2{
+    .first .main h2 {
         font-size: 36px;
         line-height: 40px;
     }
 
-    .first .main .tip{
+    .first .main .tip {
         font-size: 20px;
-        margin-top:0;
+        margin-top: 0;
     }
 
-    .first .main .tit{
+    .first .main .tit {
         font-size: 16px;
         margin-top: 40px;
     }
 
-    .first .main img{
+    .first .main img {
         margin-top: 10px;
     }
 
-    .first .main .time{
+    .first .main .time {
         font-size: 16px;
         margin-top: 10px;
     }
 
-    .first .main .btnBox{
+    .first .main .btnBox {
         width: 300px;
         margin-top: 80px;
     }
 
-    .first .main .btnBox .btn{
+    .first .main .btnBox .btn {
         height: 30px;
         width: 110px;
         font-size: 16px;
         line-height: 30px;
     }
 
-    .second .main p{
+    .second .main p {
         font-size: 14px;
         line-height: 20px;
     }
-    .second .main .unit{
+
+    .second .main .unit {
         padding-left: 70px;
     }
 
-    .third .main .sceneMain .unit{
+    .third .main .sceneMain .unit {
         box-sizing: border-box;
         width: calc(46vw);
         margin-top: 10px;
@@ -1324,289 +1323,286 @@ footer .main .mainBox .right span a{
         border-image: -webkit-linear-gradient(top, rgba(255, 98, 245, .3), rgba(55, 111, 255, .3)) 2 2;
     }
 
-    .third .main .sceneMain .unit:nth-child(2){
+    .third .main .sceneMain .unit:nth-child(2) {
         margin-right: 0;
     }
 
-    .third .main .sceneMain .unit h3{
+    .third .main .sceneMain .unit h3 {
         font-size: 16px;
     }
 
-    .third .main .sceneMain .unit .topP{
+    .third .main .sceneMain .unit .topP {
         font-size: 12px;
     }
 
-    .third .main .sceneMain .unit p{
+    .third .main .sceneMain .unit p {
         line-height: 20px;
         font-size: 12px;
     }
 
-    .fourth .main .technicalMain .unit .tip{
+    .fourth .main .technicalMain .unit .tip {
         font-size: 14px;
         margin-top: 12px;
     }
 
-    .fourth .main .technicalMain .unit .line{
+    .fourth .main .technicalMain .unit .line {
         height: 2px;
         margin-top: 12px;
     }
 
-    .fiveth .main .principleMain .unit{
+    .fiveth .main .principleMain .unit {
         padding: 0 10px;
         box-sizing: border-box;
     }
 
-    .fiveth .main .principleMain .unit .tit{
+    .fiveth .main .principleMain .unit .tit {
         font-size: 14px;
     }
 
-    .fiveth .main .principleMain .unit .tip{
+    .fiveth .main .principleMain .unit .tip {
         font-size: 12px;
         margin-top: 13px;
     }
 
-    .fiveth .main .principleMain .unit img{
+    .fiveth .main .principleMain .unit img {
         margin-top: 13px;
     }
 
-    .sixth .main .right .unit .tit{
+    .sixth .main .right .unit .tit {
         font-size: 16px;
     }
 
-    .sixth .main .right .unit .tip{
+    .sixth .main .right .unit .tip {
         font-size: 12px;
-        margin-top:0px;
+        margin-top: 0px;
     }
 
-
-    .sixth .main .right .unit{
+    .sixth .main .right .unit {
         margin-bottom: 70px;
     }
 
-    .sixth .main .left{
+    .sixth .main .left {
         height: 310px;
     }
 
-    .sixth .main .left .line{
+    .sixth .main .left .line {
         height: 220px;
     }
 
-    .sixth .main .left .second{
-        top:135px;
+    .sixth .main .left .second {
+        top: 135px;
     }
 
-    .sixth .main .left .third{
+    .sixth .main .left .third {
         top: 250px;
     }
 
-    .sixth.content{
-        //padding-bottom: 120px;
+    .sixth.content {
+    / / padding-bottom: 120 px;
     }
 
-    .sixth .main .lineMain{
+    .sixth .main .lineMain {
         width: 100vw;
     }
 
-    .sixth .main .lineMain .line{
+    .sixth .main .lineMain .line {
         width: 80vw;
         margin: 0 auto;
     }
 
-    .sixth .main .lineMain .numBox{
+    .sixth .main .lineMain .numBox {
         width: 80vw;
         margin: 0 auto;
         margin-top: 10px;
     }
 
-
-
-    footer .top{
+    footer .top {
         position: absolute;
         width: 145px;
         height: 143px;
     }
 
-    footer .bottom{
+    footer .bottom {
         position: absolute;
         height: 100px;
         width: 158px;
     }
 }
 
-@media screen and (max-width: 768px){
-    .sixth .tipBottom{
+@media screen and (max-width: 768px) {
+    .sixth .tipBottom {
         width: 100vw;
     }
 
-    .sixth .tipBottom span{
+    .sixth .tipBottom span {
         display: inline-block;
         margin-left: -10vw;
     }
 
     /*footer .leftImg{*/
-        /*width: 166px;*/
-        /*height: 21px;*/
+    /*width: 166px;*/
+    /*height: 21px;*/
     /*}*/
-
     /*footer .rightImg{*/
-        /*width: 166px;*/
-        /*height: 21px;*/
+    /*width: 166px;*/
+    /*height: 21px;*/
     /*}*/
 }
 
-@media screen and (max-width: 650px){
-    .first .nav .right .navList{
+@media screen and (max-width: 650px) {
+    .first .nav .right .navList {
         margin-left: 50px;
     }
 
-    .first .main{
+    .first .main {
         width: 80vw;
         margin: 0 auto;
         margin-top: calc(50vh - 165px);
     }
 
-    .first .main h3{
+    .first .main h3 {
         letter-spacing: 6px;
     }
 
-    .first .main .tip{
+    .first .main .tip {
         letter-spacing: 20px;
         text-indent: 20px;
     }
 }
 
-@media screen and (max-width: 450px){
-    footer .leftImg{
-    width: 166px;
-    height: 21px;
-    }
-
-    footer .rightImg{
+@media screen and (max-width: 450px) {
+    footer .leftImg {
         width: 166px;
         height: 21px;
     }
 
-    .second .main .unit .tip p{
+    footer .rightImg {
+        width: 166px;
+        height: 21px;
+    }
+
+    .second .main .unit .tip p {
         font-family: PingFangSC-Light;
     }
 
-    .sixth .main .header{
+    .sixth .main .header {
         font-size: 16px;
     }
 
-    .begin .btn{
+    .begin .btn {
         font-size: 14px;
     }
 
-    .begin .header p{
+    .begin .header p {
         font-size: 16px;
     }
 
-    .content .contentTop .tip{
+    .content .contentTop .tip {
         font-size: 16px;
     }
-    .first .main h3{
+
+    .first .main h3 {
         font-size: 20px;
     }
 
-    .first .main .tip{
+    .first .main .tip {
         font-size: 16px;
     }
-    .first .main .introduce .row{
+
+    .first .main .introduce .row {
         font-size: 14px;
     }
 
-    .first .main .btnBox .btn{
+    .first .main .btnBox .btn {
         font-size: 14px;
     }
-    .first .main{
+
+    .first .main {
         margin-top: calc(50vh - 245px);
     }
 
-    .second .main .unit .line.secondTop{
+    .second .main .unit .line.secondTop {
         margin-top: 67px;
     }
 
-    .fiveth .main .principleMain .unit .into{
+    .fiveth .main .principleMain .unit .into {
         font-size: 16px;
 
     }
 
-    .fiveth .main .principleMain .unit .tip p{
+    .fiveth .main .principleMain .unit .tip p {
         font-size: 14px;
     }
 
-    .second .main .unit{
+    .second .main .unit {
         padding-left: 30px;
     }
 
-    .second .main .unit .header{
+    .second .main .unit .header {
         display: inline-block;
         font-size: 16px;
         line-height: 16px;
         height: 38px;
     }
 
-    .second .main .unit .tip p{
+    .second .main .unit .tip p {
         font-size: 14px;
     }
 
-    .first .nav .right .navList{
+    .first .nav .right .navList {
         margin-left: 30px;
     }
 
-    .first .nav2{
+    .first .nav2 {
         height: 116px;
     }
 
-
-    footer .main .mainBox .left{
+    footer .main .mainBox .left {
         float: none;
         margin: 0 auto;
     }
 
-    footer .main .mainBox .right{
+    footer .main .mainBox .right {
         float: none;
         margin: 0 auto;
         margin-top: 30px;
     }
 
-    footer .main .mainBox .left h3{
+    footer .main .mainBox .left h3 {
         font-size: 14px;
         margin-bottom: 10px;
     }
 
-    footer .main .mainBox .left a{
+    footer .main .mainBox .left a {
         font-size: 12px;
         margin-bottom: 5px;
     }
 
-    footer .main .mainBox .right h3{
+    footer .main .mainBox .right h3 {
         font-size: 14px;
         margin-bottom: 10px;
     }
 
-    footer .main .mainBox .right span{
+    footer .main .mainBox .right span {
         font-size: 12px;
         margin-bottom: 5px;
     }
 
-    footer .bottom{
+    footer .bottom {
         width: 30vw;
         height: 18.9vw;
     }
 
-    footer .top{
+    footer .top {
         width: 36vw;
-        height:17vw;
+        height: 17vw;
     }
 
-
-    footer .main .mainBox{
+    footer .main .mainBox {
         padding-top: 30px;
     }
 
-    footer .main .mainBox{
+    footer .main .mainBox {
         width: 100%;
         padding: 0 60px;
         padding-top: 30px;
